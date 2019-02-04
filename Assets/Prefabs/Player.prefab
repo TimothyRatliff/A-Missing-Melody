@@ -12,10 +12,9 @@ GameObject:
   - component: {fileID: 4239129891938840295}
   - component: {fileID: 7502608343002007317}
   - component: {fileID: 1970110209505271089}
-  - component: {fileID: 4131711880751283128}
-  - component: {fileID: 5233308466676060154}
   - component: {fileID: 1253073136}
   - component: {fileID: 1253073137}
+  - component: {fileID: 1253073138}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -122,61 +121,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &4131711880751283128
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4239129891938840292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49d93c770538b304b9275ad69d7b8883, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minGroundNormalY: 0.65
-  gravityModifier: 1
-  targetVelocity: {x: 0, y: 0}
-  grounded: 0
-  wallDirection: 0
-  touchIce: 0
-  jump: {fileID: 0}
-  dash: {fileID: 0}
-  onRope: 0
-  walljump: 0
-  right: 0
-  maxSpeed: 7
-  jumpTakeOffSpeed: 7
-  isDashing: 0
-  isWallJumping: 0
-  wallSide: 0
-  canDash: 0
-  holdSpeed: 0
-  isSliding: 0
-  noSlideYet: 0
---- !u!114 &5233308466676060154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4239129891938840292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9992cc6c1e638294db4ce3879bfdc509, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minGroundNormalY: 0.65
-  gravityModifier: 1
-  targetVelocity: {x: 0, y: 0}
-  grounded: 0
-  wallDirection: 0
-  touchIce: 0
-  jump: {fileID: 0}
-  dash: {fileID: 0}
-  onRope: 0
-  walljump: 0
-  right: 0
 --- !u!114 &1253073136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,3 +176,22 @@ MonoBehaviour:
   onRope: 0
   walljump: 0
   right: 0
+--- !u!95 &1253073138
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4239129891938840292}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
