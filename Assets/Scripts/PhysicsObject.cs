@@ -16,11 +16,11 @@ public class PhysicsObject : MonoBehaviour
     protected RaycastHit2D[] hitBuffer = new RaycastHit2D[16];
     protected List<RaycastHit2D> hitBufferList = new List<RaycastHit2D>(16);
     public float wallDirection = 0.0f;
-    public bool touchIce;
+    //public bool touchIce;
     public AudioSource jump;
-    public AudioSource dash;
+    //public AudioSource dash;
 
-    public bool onRope;
+    //public bool onRope;
 
     protected const float minMoveDistance = 0.001f;
     protected const float shellRadius = 0.01f;
@@ -43,14 +43,14 @@ public class PhysicsObject : MonoBehaviour
     {
         targetVelocity = Vector2.zero;
         ComputeVelocity();
-         if (Input.GetButtonDown("Jump") && grounded)
+         if (Input.GetButtonDown("Jump") && grounded && jump != null)
         {
             jump.Play();
         }
-        if(Input.GetButtonDown("Fire3"))
-        {
-            dash.Play();
-        }
+        //if(Input.GetButtonDown("Fire3"))
+        //{
+        //    dash.Play();
+        //}
     }
 
     protected virtual void ComputeVelocity()
@@ -143,18 +143,18 @@ public class PhysicsObject : MonoBehaviour
             
         }
 
-        if (collision.gameObject.tag == "ice")
-        {
-            touchIce = false;
-        }
+        //if (collision.gameObject.tag == "ice")
+        //{
+        //    touchIce = false;
+        //}
     }
 
     void OnCollisionStay2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "ice")
-        {
-            touchIce = true;
-        }
+        //if (collision.gameObject.tag == "ice")
+        //{
+        //    touchIce = true;
+        //}
 
         if (collision.gameObject.tag == "movingPlatform" && Input.GetAxis("Horizontal") < 0.1f && Input.GetAxis("Horizontal") > -0.1f && !Input.GetButton("Jump") && !Input.GetButton("Fire3")){
             transform.parent = collision.transform.parent;
@@ -163,15 +163,15 @@ public class PhysicsObject : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision){
-        if (collision.gameObject.tag == "rope"){
-            onRope = true;
-        }
-    }
+    //void OnTriggerEnter2D(Collider2D collision){
+    //    if (collision.gameObject.tag == "rope"){
+    //        onRope = true;
+    //    }
+    //}
 
-    void OnTriggerExit2D(Collider2D collision){
-        if (collision.gameObject.tag == "rope"){
-            onRope = false;
-        }
-    }
+    //void OnTriggerExit2D(Collider2D collision){
+    //    if (collision.gameObject.tag == "rope"){
+    //        onRope = false;
+    //    }
+    //}
 }
