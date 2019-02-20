@@ -932,6 +932,7 @@ MonoBehaviour:
   - demo_Narration
   - Example3Dialogue
   - Example4_dialogue
+  - Gandalf
   - Item_LookUp
   - Laura
   - MrCube
@@ -3541,6 +3542,11 @@ PrefabInstance:
     - target: {fileID: 4239129891938840292, guid: e8593b8ac7ce21147b3ffff265840ada,
         type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239129891938840292, guid: e8593b8ac7ce21147b3ffff265840ada,
+        type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4239129891938840294, guid: e8593b8ac7ce21147b3ffff265840ada,

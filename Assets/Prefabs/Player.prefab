@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 1253073138}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -138,21 +138,14 @@ MonoBehaviour:
   targetVelocity: {x: 0, y: 0}
   grounded: 0
   wallDirection: 0
-  touchIce: 0
   jump: {fileID: 0}
-  dash: {fileID: 0}
-  onRope: 0
   walljump: 0
   right: 0
   maxSpeed: 7
   jumpTakeOffSpeed: 7
-  isDashing: 0
   isWallJumping: 0
   wallSide: 0
-  canDash: 0
   holdSpeed: 0
-  isSliding: 0
-  noSlideYet: 0
 --- !u!114 &1253073137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,10 +163,7 @@ MonoBehaviour:
   targetVelocity: {x: 0, y: 0}
   grounded: 0
   wallDirection: 0
-  touchIce: 0
   jump: {fileID: 0}
-  dash: {fileID: 0}
-  onRope: 0
   walljump: 0
   right: 0
 --- !u!95 &1253073138
