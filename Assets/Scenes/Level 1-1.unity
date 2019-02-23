@@ -1204,27 +1204,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 564720487}
   m_CullTransparentMesh: 0
---- !u!1 &698296460 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4239129891938840292, guid: e8593b8ac7ce21147b3ffff265840ada,
-    type: 3}
-  m_PrefabInstance: {fileID: 4239129891027635721}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &698296461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 698296460}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abc2c3b0421a54f439303d564e1985bf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  firePoint: {fileID: 2071739161}
-  whistlePrefab: {fileID: 7160846379727142565, guid: 2a73e44fe94e2d44cbb4b24fdefa1cb3,
-    type: 3}
 --- !u!1 &867720510
 GameObject:
   m_ObjectHideFlags: 0
@@ -2339,36 +2318,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2, y: 11.55}
   m_EdgeRadius: 0
---- !u!1 &2071739160
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2071739161}
-  m_Layer: 0
-  m_Name: FirePoint
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2071739161
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071739160}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.735, y: 1.148, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1124655806}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4239129891027635721
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2379,11 +2328,6 @@ PrefabInstance:
     - target: {fileID: 4239129891938840292, guid: e8593b8ac7ce21147b3ffff265840ada,
         type: 3}
       propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4239129891938840292, guid: e8593b8ac7ce21147b3ffff265840ada,
-        type: 3}
-      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 4239129891938840294, guid: e8593b8ac7ce21147b3ffff265840ada,
@@ -2441,27 +2385,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4239129891938840295, guid: e8593b8ac7ce21147b3ffff265840ada,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7502608343002007317, guid: e8593b8ac7ce21147b3ffff265840ada,
-        type: 3}
-      propertyPath: m_Offset.x
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253073136, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
-      propertyPath: jumpTakeOffSpeed
-      value: 25
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253073136, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
-      propertyPath: maxSpeed
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253073138, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 1e3aa6335d81ba140bf8cec73d68f248, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
