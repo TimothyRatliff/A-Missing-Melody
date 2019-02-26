@@ -1,18 +1,31 @@
 fileFormatVersion: 2
-guid: ab30771feb349324cacfad7d84280b7f
+guid: b8d5bd6c4dee6cb4eb71797e4af46d4d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SpriteFULL_0
-    21300002: SpriteFULL_1
-    21300004: SpriteFULL_2
-    21300006: SpriteFULL_3
-    21300008: SpriteFULL_4
-    21300010: SpriteFULL_8
-    21300012: SpriteFULL_9
-    21300014: SpriteFULL_10
-    21300016: SpriteFULL_5
-    21300018: SpriteFULL_6
-    21300020: SpriteFULL_7
+    21300000: WalkingAnim_0
+    21300002: WalkingAnim_1
+    21300004: WalkingAnim_2
+    21300006: WalkingAnim_3
+    21300008: WalkingAnim_4
+    21300010: WalkingAnim_5
+    21300012: WalkingAnim_6
+    21300014: WalkingAnim_7
+    21300016: WalkingAnim_8
+    21300018: WalkingAnim_9
+    21300020: WalkingAnim_10
+    21300022: WalkingAnim_11
+    21300024: WalkingAnim_12
+    21300026: WalkingAnim_13
+    21300028: WalkingAnim_14
+    21300030: WalkingAnim_15
+    21300032: WalkingAnim_16
+    21300034: WalkingAnim_17
+    21300036: WalkingAnim_18
+    21300038: WalkingAnim_19
+    21300040: WalkingAnim_20
+    21300042: WalkingAnim_21
+    21300044: WalkingAnim_22
+    21300046: WalkingAnim_23
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -42,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: -1
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -56,7 +69,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 50
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -95,13 +108,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SpriteFULL_0
+      name: WalkingAnim_0
       rect:
         serializedVersion: 2
-        x: 115
-        y: 650
-        width: 200
-        height: 335
+        x: 104
+        y: 654
+        width: 133
+        height: 303
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -109,19 +122,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 219e40308731f2049aa1466e9c6ec1aa
+      spriteID: 4c671d8f346d9cd4d82dfa43ad25f1d8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteFULL_1
+      name: WalkingAnim_1
       rect:
         serializedVersion: 2
-        x: 371
-        y: 650
-        width: 200
-        height: 335
+        x: 342
+        y: 662
+        width: 154
+        height: 296
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,19 +142,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89378de366085344980c60d2e19033bb
+      spriteID: 1628d1d4e17ad4b469f21890aa91f060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteFULL_2
+      name: WalkingAnim_2
       rect:
         serializedVersion: 2
-        x: 570
-        y: 650
-        width: 200
-        height: 335
+        x: 562
+        y: 656
+        width: 135
+        height: 305
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,19 +162,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdb8453c7da85c546a6ab46c96490dcd
+      spriteID: 4d5d8beba5d045140b4bb60a786b41bd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteFULL_3
+      name: WalkingAnim_3
       rect:
         serializedVersion: 2
-        x: 767
-        y: 650
-        width: 200
-        height: 335
+        x: 777
+        y: 660
+        width: 104
+        height: 304
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,19 +182,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ff82b2453b374a4cb86260b3cef3055
+      spriteID: 7b235aafa55b3f04ba85e2f34cacf9c2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteFULL_4
+      name: WalkingAnim_4
       rect:
         serializedVersion: 2
-        x: 992
-        y: 650
-        width: 200
-        height: 335
+        x: 1007
+        y: 663
+        width: 102
+        height: 301
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,19 +202,99 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae2f1b2c4ba8d8f468a781a89e962ec1
+      spriteID: bccdf4e410e541846aa2ce4252a5c70b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteFULL_8
+      name: WalkingAnim_5
       rect:
         serializedVersion: 2
-        x: 123
+        x: 1181
+        y: 667
+        width: 123
+        height: 303
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62ffbc030f7bb35418f5f43900135c95
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingAnim_6
+      rect:
+        serializedVersion: 2
+        x: 1370
+        y: 666
+        width: 133
+        height: 304
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0954f23e9449c5042914245e052532de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingAnim_8
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 672
+        width: 172
+        height: 293
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3414d985ad9b7d4d9a5339540abbb47
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingAnim_15
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 303
+        width: 141
+        height: 305
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3090c92820f9f8b44afb9f17ce3cef40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WalkingAnim_16
+      rect:
+        serializedVersion: 2
+        x: 1371
         y: 300
-        width: 200
-        height: 335
+        width: 150
+        height: 306
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -209,19 +302,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bdd8717a925d87647853aba91e1b46a7
+      spriteID: 4951805047a627b4f83c9e3505faf26c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SpriteFULL_9
+      name: WalkingAnim_17
       rect:
         serializedVersion: 2
-        x: 397
-        y: 300
-        width: 200
-        height: 335
+        x: 1656
+        y: 328
+        width: 107
+        height: 300
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,87 +322,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f2e9f3eaed828fc45b4e645cb1c66cc5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteFULL_10
-      rect:
-        serializedVersion: 2
-        x: 648
-        y: 298
-        width: 200
-        height: 335
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1f8f258b0673c54198eac83bb963c34
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteFULL_5
-      rect:
-        serializedVersion: 2
-        x: 1192
-        y: 650
-        width: 200
-        height: 335
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e7566f40ff273d40af573efad2a89f5
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteFULL_6
-      rect:
-        serializedVersion: 2
-        x: 1399
-        y: 650
-        width: 200
-        height: 335
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bed03ced82f9a043ae5de49f0bf8421
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SpriteFULL_7
-      rect:
-        serializedVersion: 2
-        x: 1631
-        y: 650
-        width: 200
-        height: 335
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 714c8010a20f88d41a25cfa66da04cf2
+      spriteID: 0b35f37359f2a6245b6dd96eeba9e87b
       vertices: []
       indices: 
       edges: []
@@ -317,7 +330,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 62e94d16e6c774340a6aebab8ed2da93
+    spriteID: c15a85b336fe5c64796df61a84a567fa
     vertices: []
     indices: 
     edges: []

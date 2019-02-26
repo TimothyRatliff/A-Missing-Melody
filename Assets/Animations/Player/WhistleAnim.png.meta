@@ -1,7 +1,16 @@
 fileFormatVersion: 2
-guid: d76ff92335eaab54aafd7626db835f82
+guid: 57541db62db895c4bb58222a06159f53
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: WhistleAnim_0
+    21300002: WhistleAnim_1
+    21300004: WhistleAnim_2
+    21300006: WhistleAnim_3
+    21300008: WhistleAnim_4
+    21300010: WhistleAnim_5
+    21300012: WhistleAnim_6
+    21300014: WhistleAnim_7
+    21300016: WhistleAnim_8
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -40,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -82,11 +91,71 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: WhistleAnim_0
+      rect:
+        serializedVersion: 2
+        x: 431
+        y: 424
+        width: 36
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5da24a070ecb5c94ca3f4ece69d4729a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhistleAnim_3
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 353
+        width: 93
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0835f2b6415c1b94db8139264e58c001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WhistleAnim_8
+      rect:
+        serializedVersion: 2
+        x: 1021
+        y: 268
+        width: 203
+        height: 347
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e549b22bf4582d04fa9452cfc054b19a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 255ab6a5d6c1ef9439e6b2d8dfc7481f
+    spriteID: 14f73448aaee0f6488c9d2d8e4a20911
     vertices: []
     indices: 
     edges: []

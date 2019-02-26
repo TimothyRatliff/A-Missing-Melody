@@ -6,13 +6,20 @@ public class PlayerAbilities : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject whistlePrefab;
+    private Animator anim;
     bool fired = false;
+
+    void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            anim.SetTrigger("isWhistle");
             Shoot();
         }
 
