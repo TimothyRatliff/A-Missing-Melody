@@ -1204,7 +1204,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1092882067
 Transform:
   m_ObjectHideFlags: 0
@@ -2143,6 +2143,16 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1173300758}
+    - target: {fileID: 3638253473436312395, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.570878
+      objectReference: {fileID: 0}
+    - target: {fileID: 3638253473436312395, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.082168
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12789bde8c2000f4580f8f85d763108a, type: 3}
 --- !u!1001 &4239129891027635721
@@ -2152,11 +2162,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4239129891938840292, guid: e8593b8ac7ce21147b3ffff265840ada,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
     - target: {fileID: 4239129891938840294, guid: e8593b8ac7ce21147b3ffff265840ada,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2211,6 +2216,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239129891938840292, guid: e8593b8ac7ce21147b3ffff265840ada,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
