@@ -189,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318823863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.547145, y: 12.067367, z: -0.045754433}
+  m_LocalPosition: {x: 12.320878, y: 12.102168, z: -0.045754433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1281429838}
@@ -1494,7 +1494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02d6a9e41aca91f4dab0c1d20523fb0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelToLoad: evel 1-2
+  levelToLoad: Level 1-2
 --- !u!61 &973583983
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2655,6 +2655,10 @@ PrefabInstance:
     - target: {fileID: 1253073138, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2071739161, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
