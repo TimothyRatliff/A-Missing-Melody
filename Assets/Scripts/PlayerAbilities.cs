@@ -8,6 +8,7 @@ public class PlayerAbilities : MonoBehaviour
     public GameObject whistlePrefab;
     private Animator anim;
     bool fired = false;
+    public AudioSource whistle;
 
     void Awake()
     {
@@ -21,6 +22,7 @@ public class PlayerAbilities : MonoBehaviour
         {
             anim.SetTrigger("isWhistle");
             Shoot();
+            whistle.Play();
         }
 
     }
