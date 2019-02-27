@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/testscene.unity
-    guid: 458dc506b4e8e7f46b9023a6c3fa1889
+    path: Assets/Scenes/Melody.unity
+    guid: 024a2703297971747a0f2842a115a6d8
   - enabled: 1
     path: Assets/Scenes/Level 1-1.unity
     guid: 7d6f1253758d0f14cb253bd8c631d4da
