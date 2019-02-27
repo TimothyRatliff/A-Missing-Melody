@@ -30,7 +30,7 @@ public class MusicManager : MonoBehaviour
             //If I am the first instance, make me the Singleton
             _instance = this;
             DontDestroyOnLoad(this);
-            Play();
+            ost.Play();
         }
         else
         {
@@ -39,10 +39,5 @@ public class MusicManager : MonoBehaviour
             if(this != _instance)
                 Destroy(this.gameObject);
         }
-    }
-
-    public void Play()
-    {
-        ost.Play();
     }
 }
