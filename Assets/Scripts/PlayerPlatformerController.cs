@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 public class PlayerPlatformerController : PhysicsObject
 {
 
@@ -11,7 +10,6 @@ public class PlayerPlatformerController : PhysicsObject
     public bool isWallJumping;
     public bool wallSide;
     //public bool canDash;
-    private SpriteRenderer spriteRenderer;
     private Animator anim;
     private bool facingRight;
     public float holdSpeed;
@@ -22,10 +20,9 @@ public class PlayerPlatformerController : PhysicsObject
     // Use this for initialization
     void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
         //canDash = true;
-        facingRight = true;
+        facingRight = false;
         isWallJumping = false;
         //isSliding = false;
     }
@@ -89,8 +86,11 @@ public class PlayerPlatformerController : PhysicsObject
 
         if (move.x > 0.1f){
             anim.SetTrigger("isWalking");
-            facingRight = true;
-            spriteRenderer.flipX = false;
+            if (!facingRight)
+            {
+                transform.localScale = new Vector3(transform.localScale.x *-1, transform.localScale.y, transform.localScale.z);
+                facingRight = true;
+            }
             //noSlideYet = false;
             //if (isSliding)
             //{
@@ -98,8 +98,11 @@ public class PlayerPlatformerController : PhysicsObject
             //}
         } else if (move.x < -0.1f){
             anim.SetTrigger("isWalking");
-            facingRight = false;
-            spriteRenderer.flipX = true;
+            if (facingRight)
+            {
+                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
+                facingRight = false;
+            }
             //noSlideYet = false;
             //if (isSliding)
             //{
