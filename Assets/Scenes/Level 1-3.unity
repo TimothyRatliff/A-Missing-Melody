@@ -1617,6 +1617,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 311
   speed: 2
+  health: 1
+  itemToSpawn: {fileID: 6664803078381115993, guid: a2a07505b5c85b2449b852ebc85c1d35,
+    type: 3}
 --- !u!61 &557856691
 BoxCollider2D:
   m_ObjectHideFlags: 0
