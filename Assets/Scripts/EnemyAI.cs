@@ -32,7 +32,6 @@ public class EnemyAI : MonoBehaviour
             Vector3 currentRotation = myTrans.eulerAngles;
             currentRotation.y = 180;
             myTrans.eulerAngles = currentRotation;
-            Debug.Log(myTrans.eulerAngles);
             myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
         }
     }

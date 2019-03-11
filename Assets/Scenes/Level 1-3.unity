@@ -1284,7 +1284,7 @@ GameObject:
   m_Layer: 9
   m_Name: EnemyGrunt
   m_TagString: EnemyGrunt
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1348,7 +1348,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &557856690
 MonoBehaviour:
@@ -1379,7 +1379,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.16065454}
+  m_Offset: {x: 0, y: 0.114737034}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -1390,7 +1390,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.64, y: 4.758691}
+  m_Size: {x: 5.64, y: 4.850526}
   m_EdgeRadius: 0
 --- !u!50 &557856692
 Rigidbody2D:
@@ -1592,7 +1592,7 @@ PrefabInstance:
     - target: {fileID: 6762041632586466091, guid: 705d6b527f49ee349842c32709ab34d1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6762041632586466091, guid: 705d6b527f49ee349842c32709ab34d1,
         type: 3}
