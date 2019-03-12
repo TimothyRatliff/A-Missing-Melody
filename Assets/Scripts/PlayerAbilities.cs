@@ -7,11 +7,12 @@ public class PlayerAbilities : MonoBehaviour
     public Transform firePoint;
     public GameObject whistlePrefab;
     private Animator anim;
-    bool fired = false;
+    public bool fired = false;
     public AudioSource whistle;
 
     void Awake()
     {
+        
         anim = GetComponent<Animator>();
     }
 
@@ -23,13 +24,14 @@ public class PlayerAbilities : MonoBehaviour
             anim.SetTrigger("isWhistle");
             Shoot();
             whistle.Play();
+            //grunt.GetComponent<EnemyAI>().Stunned();
         }
 
     }
 
-    void Shoot()
+    public bool Shoot()
     {
-        //whistle
-        Instantiate(whistlePrefab, firePoint.position, firePoint.rotation);
+        return fired = true;
     }
+    
 }
