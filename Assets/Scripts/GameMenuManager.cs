@@ -9,6 +9,7 @@ public class GameMenuManager : MonoBehaviour
     public static bool gamePaused = false;
     public GameObject pauseMenuUI;
     private bool paused = false;
+    public GameObject cameraLogic;
     //public GameObject gameOverUI;
 
 
@@ -21,20 +22,22 @@ public class GameMenuManager : MonoBehaviour
                 paused = true;
                 pauseMenuUI.SetActive(true);
                 Time.timeScale = 0f;
+                cameraLogic.SetActive(false);
             }
             else
             {
                 paused = false;
-                pauseMenuUI.SetActive(false);
-                Time.timeScale = 1f;
+                ResumeGame();
             }
         }
     }
 
     public void ResumeGame()
     {
+        paused = false;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        cameraLogic.SetActive(true);
     }
     public void Start()
     {

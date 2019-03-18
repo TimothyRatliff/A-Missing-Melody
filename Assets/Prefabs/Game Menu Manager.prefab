@@ -389,7 +389,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 5.0000396, y: -261.00006}
-  m_SizeDelta: {x: 440, y: 140}
+  m_SizeDelta: {x: 526.2, y: 173.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1272583305929194637
 CanvasRenderer:
@@ -494,7 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.21568628}
-  m_EffectDistance: {x: 220, y: 70}
+  m_EffectDistance: {x: 262.1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!1 &1272583306261578731
 GameObject:
@@ -534,7 +534,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 5, y: 239}
-  m_SizeDelta: {x: 440, y: 140}
+  m_SizeDelta: {x: 526.2, y: 173.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1272583306261578720
 CanvasRenderer:
@@ -639,7 +639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.21568628}
-  m_EffectDistance: {x: 220, y: 70}
+  m_EffectDistance: {x: 262.1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!1 &1272583306314468875
 GameObject:
@@ -676,10 +676,10 @@ RectTransform:
   m_Father: {fileID: 8669718115296924434}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.00056102, y: 0.012428}
-  m_SizeDelta: {x: 2815.5, y: 1920}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1272583306314468878
 CanvasRenderer:
@@ -703,7 +703,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.31132078, g: 0.31132078, b: 0.31132078, a: 0.54509807}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -756,7 +756,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 5.0000396, y: -11.000061}
-  m_SizeDelta: {x: 440, y: 140}
+  m_SizeDelta: {x: 526.2, y: 173.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1272583307036534045
 CanvasRenderer:
@@ -861,7 +861,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.21568628}
-  m_EffectDistance: {x: 220, y: 70}
+  m_EffectDistance: {x: 262.1, y: -1}
   m_UseGraphicAlpha: 1
 --- !u!1 &8669718115035362360
 GameObject:
@@ -1072,6 +1072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 1272583306314468875}
+  cameraLogic: {fileID: 0}
 --- !u!1 &8669718115593315422
 GameObject:
   m_ObjectHideFlags: 0
