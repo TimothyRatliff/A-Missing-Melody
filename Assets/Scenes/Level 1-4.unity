@@ -1029,7 +1029,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 4bd6787c7b1eaa049a527159051182f7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a167d9108dea13145802487e78597682, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1048,8 +1048,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1173300755}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.48, y: 6.3, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: -16.324, y: 4.665, z: 0}
+  m_LocalScale: {x: 2.9552248, y: 2.3831596, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -1071,7 +1071,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 19.11, y: 10.35}
+    oldSize: {x: 19.19, y: 10.35}
     newSize: {x: 19.11, y: 10.35}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1079,10 +1079,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -9.366352, y: 3.501031}
+    - - {x: -9.59, y: 4.11}
       - {x: -9.33209, y: -4.9778895}
-      - {x: 9.209964, y: -4.864665}
-      - {x: 9.167436, y: 3.4118638}
+      - {x: 9.57, y: -4.864665}
+      - {x: 9.588995, y: 4.3266797}
 --- !u!1 &1910090603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1341,6 +1341,11 @@ PrefabInstance:
       propertyPath: cameraLogic
       value: 
       objectReference: {fileID: 1046055091}
+    - target: {fileID: 1272583306314468875, guid: 8b83d2c83ba97784190ee4de2eaeb353,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b83d2c83ba97784190ee4de2eaeb353, type: 3}
 --- !u!1 &3221848582022289849 stripped
@@ -1572,12 +1577,12 @@ PrefabInstance:
     - target: {fileID: 4518190054953938455, guid: 12789bde8c2000f4580f8f85d763108a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.7672253
+      value: 4.5560083
       objectReference: {fileID: 0}
     - target: {fileID: 4518190054953938455, guid: 12789bde8c2000f4580f8f85d763108a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.163354
+      value: 10.152691
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12789bde8c2000f4580f8f85d763108a, type: 3}
