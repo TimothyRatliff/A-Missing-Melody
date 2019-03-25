@@ -125,13 +125,9 @@ public class PhysicsObject : MonoBehaviour
         {
             Collider2D collider = collision.collider;
             walljump = true;
-           
-
             Vector3 contactPoint = collision.contacts[0].point;
             Vector3 center = collider.bounds.center;
-
              right = contactPoint.x > center.x;
-
         }
     }
 
