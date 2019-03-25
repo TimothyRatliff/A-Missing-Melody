@@ -13,6 +13,7 @@ public class EnemyAI : MonoBehaviour
     private float defaultStunTime;
     public float attackCooldown = 3;
     private float defaultAttackCooldown;
+    private Animator anim;
 
     public int health = 1;
     Rigidbody2D myBody;
@@ -20,6 +21,11 @@ public class EnemyAI : MonoBehaviour
     public GameObject itemToSpawn;
 
     private bool playerInAttack = false;
+
+    void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Start()
     {
@@ -55,6 +61,7 @@ public class EnemyAI : MonoBehaviour
         } else {
             if (myTrans.position.x < target.position.x)
             {
+                anim.SetTrigger("isWalking");
                 Vector3 currentRotation = myTrans.eulerAngles;
                 currentRotation.y = 0;
                 myTrans.eulerAngles = currentRotation;
