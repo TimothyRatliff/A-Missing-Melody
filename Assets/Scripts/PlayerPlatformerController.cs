@@ -135,12 +135,12 @@ public class PlayerPlatformerController : PhysicsObject
         {
             if (wallSide)
             {
-                velocity.y = jumpTakeOffSpeed * 1.25f;
+                velocity.y = jumpTakeOffSpeed;
                 targetVelocity = new Vector2(1, 0) * maxSpeed * -1;
             }
             else
             {
-                velocity.y = jumpTakeOffSpeed * 1.25f;
+                velocity.y = jumpTakeOffSpeed;
                 targetVelocity = new Vector2(1, 0) * maxSpeed * 1;
             }
         }

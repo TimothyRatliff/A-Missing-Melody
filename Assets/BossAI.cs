@@ -22,6 +22,7 @@ public class BossAI : MonoBehaviour
     private Color transparent = new Color(1, 1, 1, .8f);
     private Rigidbody2D rb;
     private bool onepass;
+    public GameObject gateToUnlock;
 
     private bool playerInAttack = false;
 
@@ -108,6 +109,8 @@ public class BossAI : MonoBehaviour
     {
         //Item Spawner//
         SpawnItem(itemToSpawn);
+        if (gateToUnlock != null)
+            gateToUnlock.SetActive(false);
     }
 
     // Spawns GameObject upwards
