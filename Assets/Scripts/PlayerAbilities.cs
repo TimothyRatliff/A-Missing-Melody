@@ -12,8 +12,7 @@ public class PlayerAbilities : MonoBehaviour
 
     void Awake()
     {
-        
-        anim = GetComponent<Animator>();
+        anim = whistlePrefab.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,7 +20,7 @@ public class PlayerAbilities : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1"))
         {
-            anim.SetTrigger("isWhistle");
+            anim.SetTrigger("usingWhistle");
             Shoot();
             whistle.Play();
             //grunt.GetComponent<EnemyAI>().Stunned();
