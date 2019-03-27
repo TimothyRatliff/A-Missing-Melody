@@ -18,19 +18,17 @@ public class PlayerAbilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Whistle
         if (Input.GetButtonDown("Fire1"))
         {
             anim.SetTrigger("usingWhistle");
-            Shoot();
+            fired = true;
             whistle.Play();
             //grunt.GetComponent<EnemyAI>().Stunned();
         }
-
+        else
+        {
+           fired = false; 
+        }
     }
-
-    public bool Shoot()
-    {
-        return fired = true;
-    }
-    
 }

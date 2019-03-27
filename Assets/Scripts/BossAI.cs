@@ -22,6 +22,8 @@ public class BossAI : MonoBehaviour
     private Color transparent = new Color(1, 1, 1, .8f);
     private Rigidbody2D rb;
     private bool onepass;
+    private bool dead;
+    public bool frozen;
     public GameObject gateToUnlock;
 
     private bool playerInAttack = false;
@@ -39,69 +41,74 @@ public class BossAI : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
-        stunned = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired;
-
-        //stun//
-
-        if (stunned)
+        if (!dead)
         {
-            stunTime -= Time.deltaTime;
-            speed = 0;
-            mySprite.color = transparent;
-            if (!onepass)
-            {
-                rb.simulated = false;
-                onepass = true;
-            }
-            if (stunTime < 0)
-            {
-                stunned = false;
-                onepass = false;
-                rb.simulated = true;
-                mySprite.color = Color.white;
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired = false;
-                speed = defaultSpeed;
-                stunTime = defaultStunTime;
-            }
+                
+            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
-        }
-        else
-        {
-            if (myTrans.position.x < target.position.x)
+            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired)
+                stunned = true;
+
+            //stun//
+
+            if (stunned)
             {
-                Vector3 currentRotation = myTrans.eulerAngles;
-                currentRotation.y = 0;
-                myTrans.eulerAngles = currentRotation;
-                myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
-            }
-            else
-            {
-                Vector3 currentRotation = myTrans.eulerAngles;
-                currentRotation.y = 180;
-                myTrans.eulerAngles = currentRotation;
-                myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
-            }
-            if (attacking)
-            {
-                //TODO: put attack animation here
-                Debug.Log("Enemy Attacking (need animation)");
-                attackCooldown -= Time.deltaTime;
+                stunTime -= Time.deltaTime;
                 speed = 0;
-                if (attackCooldown < 0)
+                mySprite.color = transparent;
+                if (!onepass)
                 {
-                    attacking = false;
+                    rb.simulated = false;
+                    onepass = true;
+                }
+                if (stunTime < 0)
+                {
+                    stunned = false;
+                    onepass = false;
+                    rb.simulated = true;
+                    mySprite.color = Color.white;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired = false;
                     speed = defaultSpeed;
-                    attackCooldown = defaultAttackCooldown;
+                    stunTime = defaultStunTime;
+                }
+
+            }
+            else if (!stunned && !frozen)
+            {
+                if (myTrans.position.x < target.position.x)
+                {
+                    Vector3 currentRotation = myTrans.eulerAngles;
+                    currentRotation.y = 0;
+                    myTrans.eulerAngles = currentRotation;
+                    myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
+                }
+                else
+                {
+                    Vector3 currentRotation = myTrans.eulerAngles;
+                    currentRotation.y = 180;
+                    myTrans.eulerAngles = currentRotation;
+                    myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
+                }
+                if (attacking)
+                {
+                    //TODO: put attack animation here
+                    Debug.Log("Enemy Attacking (need animation)");
+                    attackCooldown -= Time.deltaTime;
+                    speed = 0;
+                    if (attackCooldown < 0)
+                    {
+                        attacking = false;
+                        speed = defaultSpeed;
+                        attackCooldown = defaultAttackCooldown;
+                    }
                 }
             }
-        }
 
-        if (health <= 0)
-        {
-            transform.gameObject.SetActive(false);
+            if (health <= 0)
+            {
+                dead = true;
+                transform.gameObject.SetActive(false);
+            }
         }
     }
 

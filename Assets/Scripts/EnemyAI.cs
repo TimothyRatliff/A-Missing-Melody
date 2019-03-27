@@ -21,6 +21,8 @@ public class EnemyAI : MonoBehaviour
     public GameObject itemToSpawn;
 
     private bool playerInAttack = false;
+    private bool dead;
+    public bool frozen;
 
     void Awake()
     {
@@ -39,65 +41,68 @@ public class EnemyAI : MonoBehaviour
 
     void FixedUpdate()
     {
-
-        target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
-        stunned = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired;
-
-        //stun//
-
-        if (stunned)
+        if (!dead )
         {
-            stunTime -= Time.deltaTime;
-            speed = 0;
-            if (stunTime < 0)
-            {
-                stunned = false;
-                GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired = false;
-                speed = defaultSpeed;
-                stunTime = defaultStunTime;
-            }
+            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
-        } else {
-            if (myTrans.position.x < target.position.x)
+            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired)
+                stunned = true;
+
+            //stun//
+
+            if (stunned)
             {
-                anim.SetTrigger("isWalking");
-                Vector3 currentRotation = myTrans.eulerAngles;
-                currentRotation.y = 0;
-                myTrans.eulerAngles = currentRotation;
-                myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
-            }
-            else
-            {
-                Vector3 currentRotation = myTrans.eulerAngles;
-                currentRotation.y = 180;
-                myTrans.eulerAngles = currentRotation;
-                myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
-            }
-            if (attacking)
-            {
-                //TODO: put attack animation here
-                Debug.Log("Enemy Attacking (need animation)");
-                attackCooldown -= Time.deltaTime;
+                stunTime -= Time.deltaTime;
                 speed = 0;
-                if (attackCooldown < 0)
+                if (stunTime < 0)
                 {
-                    attacking = false;
+                    stunned = false;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired = false;
                     speed = defaultSpeed;
-                    attackCooldown = defaultAttackCooldown;
+                    stunTime = defaultStunTime;
+                }
+
+            } else if (!stunned && !frozen) {
+                if (myTrans.position.x < target.position.x)
+                {
+                    anim.SetTrigger("isWalking");
+                    Vector3 currentRotation = myTrans.eulerAngles;
+                    currentRotation.y = 0;
+                    myTrans.eulerAngles = currentRotation;
+                    myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
+                }
+                else
+                {
+                    Vector3 currentRotation = myTrans.eulerAngles;
+                    currentRotation.y = 180;
+                    myTrans.eulerAngles = currentRotation;
+                    myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
+                }
+                if (attacking)
+                {
+                    //TODO: put attack animation here
+                    Debug.Log("Enemy Attacking (need animation)");
+                    attackCooldown -= Time.deltaTime;
+                    speed = 0;
+                    if (attackCooldown < 0)
+                    {
+                        attacking = false;
+                        speed = defaultSpeed;
+                        attackCooldown = defaultAttackCooldown;
+                    }
                 }
             }
-        }
 
-        if (health <= 0)
-        {
-            transform.gameObject.SetActive(false);
+            if (health <= 0)
+            {
+                transform.gameObject.SetActive(false);
+                dead = true;
+            }
         }
     }
 
     private void OnDisable()
     {
-        //Item Spawner//
         SpawnItem(itemToSpawn);
     }
 
