@@ -256,7 +256,7 @@ MonoBehaviour:
   health: 1
   itemToSpawn: {fileID: 6664803078381115993, guid: a2a07505b5c85b2449b852ebc85c1d35,
     type: 3}
-  frozen: 0
+  frozen: 1
 --- !u!95 &4381130674093843153
 Animator:
   serializedVersion: 3
@@ -288,6 +288,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066146920603539833, guid: 1264eed73d8e10f42938cdd7ca26bcb1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1066146920603539833, guid: 1264eed73d8e10f42938cdd7ca26bcb1,
+        type: 3}
+      propertyPath: frozen
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1066146920603539834, guid: 1264eed73d8e10f42938cdd7ca26bcb1,
         type: 3}
@@ -343,11 +353,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1066146920603539833, guid: 1264eed73d8e10f42938cdd7ca26bcb1,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1264eed73d8e10f42938cdd7ca26bcb1, type: 3}
