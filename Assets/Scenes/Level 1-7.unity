@@ -189,7 +189,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318823863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -32.0551, y: 19.024286, z: -0.045754433}
+  m_LocalPosition: {x: 2.4308774, y: 19.122168, z: -0.045754433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1281429838}
@@ -8437,7 +8437,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1046055091}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -40.36912, y: 19.122168, z: -0.045754433}
+  m_LocalPosition: {x: 2.4308774, y: 19.122168, z: -0.045754433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 379997055}
@@ -8691,6 +8691,7 @@ GameObject:
   - component: {fileID: 1965764278}
   - component: {fileID: 1965764280}
   - component: {fileID: 1965764279}
+  - component: {fileID: 1965764281}
   m_Layer: 0
   m_Name: Level Exit
   m_TagString: Untagged
@@ -8751,6 +8752,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.2, y: 11.55}
   m_EdgeRadius: 0
+--- !u!114 &1965764281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965764277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49408b984095b94489e1d9064fc8a5b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unlockZone2: 1
+  unlockBoss: 0
 --- !u!1 &1988413150
 GameObject:
   m_ObjectHideFlags: 0
@@ -10480,7 +10495,7 @@ PrefabInstance:
     - target: {fileID: 4239129891938840294, guid: e8593b8ac7ce21147b3ffff265840ada,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -42.39
+      value: 0.41
       objectReference: {fileID: 0}
     - target: {fileID: 4239129891938840294, guid: e8593b8ac7ce21147b3ffff265840ada,
         type: 3}
