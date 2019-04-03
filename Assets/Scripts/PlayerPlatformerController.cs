@@ -65,6 +65,7 @@ public class PlayerPlatformerController : PhysicsObject
         {
             if (velocity.y > 0)
             {
+                
                 velocity.y = velocity.y * 0.5f;
             }
         }
@@ -72,16 +73,21 @@ public class PlayerPlatformerController : PhysicsObject
         if (Input.GetButtonDown("Jump") && !grounded && walljump)
         {
             wallSide = right;
-            
+            anim.SetBool("onWall", true);
             if (isWallJumping)
             {
+                
                 StopCoroutine(WallJump());
                 isWallJumping = false;
+                anim.SetBool("onWall", false);
             }
             StartCoroutine(WallJump());
+           
         }
-        
 
+        if (Input.GetButtonDown("Jump") && !grounded && !walljump) {
+             anim.SetBool("onWall", false);
+        }
 
 
         if (move.x > 0.1f){
@@ -111,6 +117,7 @@ public class PlayerPlatformerController : PhysicsObject
         } else
         {
             anim.SetTrigger("isStopped");
+            anim.SetBool("onWall", false);
             //noSlideYet = true;
         }
 
@@ -152,6 +159,7 @@ public class PlayerPlatformerController : PhysicsObject
 
     protected IEnumerator WallJump()
     {
+        
         isWallJumping = true;
         yield return new WaitForSeconds(0.2f);
         isWallJumping = false;
