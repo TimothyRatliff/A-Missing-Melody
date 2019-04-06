@@ -13,6 +13,7 @@ public class PlayerPlatformerController : PhysicsObject
     private Animator anim;
     private bool facingRight;
     public float holdSpeed;
+    private SpriteRenderer spriteRend;
     //public bool isSliding;
     //public bool noSlideYet;
 
@@ -21,8 +22,13 @@ public class PlayerPlatformerController : PhysicsObject
     void Awake()
     {
         anim = GetComponent<Animator>();
+        spriteRend = transform.GetComponent<SpriteRenderer>();
         //canDash = true;
         facingRight = false;
+        if (right)
+        {
+            spriteRend.flipX = false;
+        }
         isWallJumping = false;
         //isSliding = false;
     }
@@ -94,6 +100,7 @@ public class PlayerPlatformerController : PhysicsObject
             anim.SetTrigger("isWalking");
             if (!facingRight)
             {
+                spriteRend.flipX = true;
                 transform.localScale = new Vector3(transform.localScale.x *-1, transform.localScale.y, transform.localScale.z);
                 facingRight = true;
             }
@@ -106,6 +113,7 @@ public class PlayerPlatformerController : PhysicsObject
             anim.SetTrigger("isWalking");
             if (facingRight)
             {
+                spriteRend.flipX = true;
                 transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
                 facingRight = false;
             }
