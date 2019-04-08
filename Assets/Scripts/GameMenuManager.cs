@@ -6,14 +6,13 @@ using UnityEngine.SceneManagement;
 public class GameMenuManager : MonoBehaviour
 {
 
-    public static bool gamePaused = false;
     public GameObject pauseMenuUI;
-    private bool paused = false;
+    public bool paused = false;
     public GameObject cameraLogic;
     //public GameObject gameOverUI;
 
 
-     void Update()
+    void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {

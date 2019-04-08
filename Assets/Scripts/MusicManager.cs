@@ -6,6 +6,7 @@ using System.Linq;
 
 public class MusicManager : MonoBehaviour 
 {
+    // public GameObject gameMenuManager;
     private static MusicManager _instance;
     public AudioSource ost;
     public string[] level1;
@@ -45,15 +46,28 @@ public class MusicManager : MonoBehaviour
             if(this != _instance)
                 Destroy(this.gameObject);
         }
+        
+        
     }
 
-    void Update()
+    // void Update()
+    // {
+    //     if(gameMenuManager.GetComponent<GameMenuManager>().paused)
+    //         isPaused();
+    // }
+
+    public void isPaused()
     {
-        level1 = new string[7]{"Level 1-1", "Level 1-2", "Level 1-3", "Level 1-4", "Level 1-5", "Level 1-6", "Level 1-7"};
-        Scene currentScene = SceneManager.GetActiveScene();
-        if(level1.Contains(currentScene.name))
-        {
-            currentLevel = 1;
-        }
+        Debug.Log("game is paused, applying music fx");
     }
+
+    // void Update()
+    // {
+    //     level1 = new string[7]{"Level 1-1", "Level 1-2", "Level 1-3", "Level 1-4", "Level 1-5", "Level 1-6", "Level 1-7"};
+    //     Scene currentScene = SceneManager.GetActiveScene();
+    //     if(level1.Contains(currentScene.name))
+    //     {
+    //         currentLevel = 1;
+    //     }
+    // }
 }
