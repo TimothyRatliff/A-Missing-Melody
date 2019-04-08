@@ -139,10 +139,23 @@ public class BossAI : MonoBehaviour
             {
                 if (Mathf.Abs(direction.y) > headHight && Mathf.Abs(direction.x) < headHight / 2)
                 {
-                    health--;
+                    StartCoroutine(damageHealth(mySprite));
                 }
             }
         }
+    }
+
+    private IEnumerator damageHealth(SpriteRenderer sprite)
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.6f);
+        health--;
+        if (health <= 0)
+        {
+            transform.gameObject.SetActive(false);
+            dead = true;
+        }
+        sprite.color = Color.white;
     }
 
     void OnTriggerEnter2D(Collider2D obj)

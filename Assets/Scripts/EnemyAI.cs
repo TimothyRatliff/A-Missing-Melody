@@ -24,6 +24,8 @@ public class EnemyAI : MonoBehaviour
     private bool dead;
     public bool frozen;
 
+    private SpriteRenderer mySprite;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -36,12 +38,12 @@ public class EnemyAI : MonoBehaviour
         defaultAttackCooldown = attackCooldown;
         myTrans = this.transform;
         myBody = this.GetComponent<Rigidbody2D>();
-        SpriteRenderer mySprite = this.GetComponent<SpriteRenderer>();
+        mySprite = this.GetComponent<SpriteRenderer>();
     }
 
     void FixedUpdate()
     {
-        if (!dead )
+        if (!dead)
         {
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
@@ -114,23 +116,36 @@ public class EnemyAI : MonoBehaviour
             Instantiate(item, new Vector3(transform.position.x, transform.position.y, 0), transform.rotation);
         }
     }
-    
+
     // get the direction of the collision
     void OnCollisionEnter2D(Collision2D obj)
-     {  
+    {
         if (obj.gameObject.tag == "Player")
         {
             Vector3 direction = transform.position - obj.gameObject.transform.position;
-            if (Mathf.Abs (direction.x) < Mathf.Abs (direction.y) && stunned) {
-                if(Mathf.Abs (direction.y) > headHight && Mathf.Abs (direction.x) < headHight/2)
+            if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y) && stunned) {
+                if (Mathf.Abs(direction.y) > headHight && Mathf.Abs(direction.x) < headHight / 2)
                 {
-                    health--;
+                    StartCoroutine(damageHealth(mySprite));
                 }
             }
         }
-     }
+    }
 
-     void OnTriggerEnter2D(Collider2D obj)
+    private IEnumerator damageHealth(SpriteRenderer sprite)
+    {
+        sprite.color = Color.red;
+        yield return new WaitForSeconds(0.6f);
+        health--;
+        if (health <= 0)
+        {
+            transform.gameObject.SetActive(false);
+            dead = true;
+        }
+        sprite.color = Color.white;
+    }
+
+    void OnTriggerEnter2D(Collider2D obj)
      {  
         if (obj.gameObject.tag == "Player")
         {
