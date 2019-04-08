@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class MusicManager : MonoBehaviour 
 {
     private static MusicManager _instance;
     public AudioSource ost;
+    public string[] level1;
+    public string[] level2;
+    public string[] MainMenu;
+    public int currentLevel = 1;
 
     public static MusicManager instance
     {
@@ -38,6 +44,16 @@ public class MusicManager : MonoBehaviour
             //another reference in scene, destroy it!
             if(this != _instance)
                 Destroy(this.gameObject);
+        }
+    }
+
+    void Update()
+    {
+        level1 = new string[7]{"Level 1-1", "Level 1-2", "Level 1-3", "Level 1-4", "Level 1-5", "Level 1-6", "Level 1-7"};
+        Scene currentScene = SceneManager.GetActiveScene();
+        if(level1.Contains(currentScene.name))
+        {
+            currentLevel = 1;
         }
     }
 }
