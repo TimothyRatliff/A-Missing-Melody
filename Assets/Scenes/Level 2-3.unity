@@ -408,6 +408,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4381130674093843158, guid: 34ac75f120bc8db4d91e8b4359702bec,
+        type: 3}
+      propertyPath: itemToSpawn
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ac75f120bc8db4d91e8b4359702bec, type: 3}
 --- !u!1001 &360054960
@@ -7099,6 +7104,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4381130674093843158, guid: 34ac75f120bc8db4d91e8b4359702bec,
+        type: 3}
+      propertyPath: itemToSpawn
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ac75f120bc8db4d91e8b4359702bec, type: 3}
 --- !u!1 &526391237
@@ -7480,6 +7490,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4381130674093843158, guid: 34ac75f120bc8db4d91e8b4359702bec,
+        type: 3}
+      propertyPath: itemToSpawn
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ac75f120bc8db4d91e8b4359702bec, type: 3}
 --- !u!1001 &943604000
@@ -7583,6 +7598,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381130674093843158, guid: 34ac75f120bc8db4d91e8b4359702bec,
+        type: 3}
+      propertyPath: itemToSpawn
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ac75f120bc8db4d91e8b4359702bec, type: 3}
@@ -7758,6 +7778,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381130674093843158, guid: 34ac75f120bc8db4d91e8b4359702bec,
+        type: 3}
+      propertyPath: itemToSpawn
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ac75f120bc8db4d91e8b4359702bec, type: 3}
@@ -8464,6 +8489,11 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 6.852145
       objectReference: {fileID: 0}
+    - target: {fileID: 4381130674093843158, guid: 34ac75f120bc8db4d91e8b4359702bec,
+        type: 3}
+      propertyPath: itemToSpawn
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ac75f120bc8db4d91e8b4359702bec, type: 3}
 --- !u!1001 &1755493799
@@ -9031,6 +9061,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4381130674093843158, guid: 34ac75f120bc8db4d91e8b4359702bec,
+        type: 3}
+      propertyPath: itemToSpawn
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ac75f120bc8db4d91e8b4359702bec, type: 3}
