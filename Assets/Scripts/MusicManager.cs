@@ -5,8 +5,12 @@ using UnityEngine;
 public class MusicManager : MonoBehaviour
 {
     public AudioSource ost;
+    public bool paused;
+    private AudioLowPassFilter FX;
+
     void Awake()
     {
+        GameObject menu = GameObject.Find("Game Menu Manager");
         GameObject[] objs = GameObject.FindGameObjectsWithTag("MusicManager");
         if(objs.Length > 1)
         {
@@ -16,4 +20,19 @@ public class MusicManager : MonoBehaviour
         ost.Play();
         DontDestroyOnLoad(this.gameObject);
     }
+    
+    // void Update()
+    // {
+    //     bool paused = menu.GetComponent<GameMenuManager>().paused;
+    //     if (paused)
+    //     {
+    //         isPaused();
+    //     }
+    // }
+
+    // void isPaused()
+    // {
+    //     FX = ost.GetComponent<AudioLowPassFilter>();
+    //     FX.enabled = true;
+    // }
 }
