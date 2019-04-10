@@ -723,6 +723,21 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1356704441}
+    - target: {fileID: 4518190054953938455, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.3208776
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518190054953938455, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.584248
+      objectReference: {fileID: 0}
+    - target: {fileID: 4518190054469942040, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.320878
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 12789bde8c2000f4580f8f85d763108a, type: 3}
 --- !u!1 &1571731299
@@ -980,6 +995,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762041632586466090, guid: 705d6b527f49ee349842c32709ab34d1,
+        type: 3}
+      propertyPath: ost
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 705d6b527f49ee349842c32709ab34d1, type: 3}
