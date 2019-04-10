@@ -15,45 +15,45 @@ EditorBuildSettings:
     path: Assets/Scenes/Melody 1.unity
     guid: 024a2703297971747a0f2842a115a6d8
   - enabled: 1
-    path: Assets/Scenes/Level 1-1.unity
+    path: Assets/Scenes/Level 1/Level 1-1.unity
     guid: 7d6f1253758d0f14cb253bd8c631d4da
   - enabled: 1
-    path: Assets/Scenes/Level 1-2.unity
+    path: Assets/Scenes/Level 1/Level 1-2.unity
     guid: 87ce728030fbb664a868da7c56022772
   - enabled: 1
-    path: Assets/Scenes/Level 1-3.unity
+    path: Assets/Scenes/Level 1/Level 1-3.unity
     guid: a74ece07237184f4690c409b224f8b4d
   - enabled: 1
-    path: Assets/Scenes/Level 1-4.unity
+    path: Assets/Scenes/Level 1/Level 1-4.unity
     guid: 34500a5ae454b3a4890a90ae446dbc6c
   - enabled: 1
-    path: Assets/Scenes/Level 1-5.unity
+    path: Assets/Scenes/Level 1/Level 1-5.unity
     guid: df472fa4e5dda9c41a128b8e61e59aa5
   - enabled: 1
-    path: Assets/Scenes/Level 1-6.unity
+    path: Assets/Scenes/Level 1/Level 1-6.unity
     guid: d7183a80615e472408491a062d4654ef
   - enabled: 1
-    path: Assets/Scenes/Level 1-7.unity
+    path: Assets/Scenes/Level 1/Level 1-7.unity
     guid: 77570868827ab144fa5d98b375dc1609
   - enabled: 1
-    path: Assets/Scenes/Level 2-1.unity
+    path: Assets/Scenes/Level 2/Level 2-1.unity
     guid: 894d6643749c37b4fb87727369c85353
   - enabled: 1
-    path: Assets/Scenes/Level 2-2.unity
+    path: Assets/Scenes/Level 2/Level 2-2.unity
     guid: 8e22ca621e4f45b4f948c214a0f148f6
   - enabled: 1
-    path: Assets/Scenes/Level 2-3.unity
+    path: Assets/Scenes/Level 2/Level 2-3.unity
     guid: f14e673784b363446a8232ba3430bc81
   - enabled: 1
-    path: Assets/Scenes/Level 2-4.unity
+    path: Assets/Scenes/Level 2/Level 2-4.unity
     guid: 2c61ba657fd7f1f4f82bd029aa0fba96
   - enabled: 1
-    path: Assets/Scenes/Level 2-5.unity
+    path: Assets/Scenes/Level 2/Level 2-5.unity
     guid: bc6391162fded2a4f90d35420b64bcd1
   - enabled: 1
-    path: Assets/Scenes/Level 2-6.unity
+    path: Assets/Scenes/Level 2/Level 2-6.unity
     guid: 3f6596a43cb518842a1069b8b3186a4e
   - enabled: 1
-    path: Assets/Scenes/Level 2-7.unity
+    path: Assets/Scenes/Level 2/Level 2-7.unity
     guid: 4b2cf73432006034386695cd3c99afad
   m_configObjects: {}
