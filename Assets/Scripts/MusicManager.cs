@@ -1,16 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MusicManager : MonoBehaviour
 {
     public AudioSource ost;
-    public bool paused;
     private AudioLowPassFilter FX;
 
     void Awake()
     {
-        GameObject menu = GameObject.Find("Game Menu Manager");
+        FX = ost.GetComponent<AudioLowPassFilter>();
         GameObject[] objs = GameObject.FindGameObjectsWithTag("MusicManager");
         if(objs.Length > 1)
         {
@@ -21,18 +21,14 @@ public class MusicManager : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
     }
     
-    // void Update()
-    // {
-    //     bool paused = menu.GetComponent<GameMenuManager>().paused;
-    //     if (paused)
-    //     {
-    //         isPaused();
-    //     }
-    // }
+    void Update()
+    {
+        if (Time.timeScale == 0f)
+        {
+            FX.enabled = true;
+        }
+        else
+            FX.enabled = false;
+    }
 
-    // void isPaused()
-    // {
-    //     FX = ost.GetComponent<AudioLowPassFilter>();
-    //     FX.enabled = true;
-    // }
 }
