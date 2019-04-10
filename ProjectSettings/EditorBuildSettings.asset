@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: ec05e761bfb6da74787dbd9d37b58fb2
   - enabled: 1
-    path: Assets/Scenes/Melody.unity
+    path: Assets/Scenes/Melody 1.unity
     guid: 024a2703297971747a0f2842a115a6d8
   - enabled: 1
     path: Assets/Scenes/Level 1-1.unity
