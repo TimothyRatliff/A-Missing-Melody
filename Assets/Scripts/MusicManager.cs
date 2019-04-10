@@ -2,18 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicManager2 : MonoBehaviour
+public class MusicManager : MonoBehaviour
 {
     public AudioSource ost;
     void Awake()
     {
-        GameObject[] objs = GameObject.FindGameObjectsWithTag("MusicManager2");
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("MusicManager");
         if(objs.Length > 1)
         {
-            Destroy(this.gameObject);
+            Debug.Log("Found multiple MusicManagers, destroying this one");
+            Destroy(objs[0]);
         }
         ost.Play();
         DontDestroyOnLoad(this.gameObject);
-
     }
 }
