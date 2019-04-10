@@ -8,7 +8,7 @@ public class StartMenuManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("Melody");
+        SceneManager.LoadScene("Melody 1");
     }
 
     public void Quit()
