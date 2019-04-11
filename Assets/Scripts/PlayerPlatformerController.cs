@@ -79,20 +79,20 @@ public class PlayerPlatformerController : PhysicsObject
         if (Input.GetButtonDown("Jump") && !grounded && walljump)
         {
             wallSide = right;
-            anim.SetBool("onWall", true);
+            anim.SetTrigger("onWall");
             if (isWallJumping)
             {
-                
+                anim.SetTrigger("onWall");
                 StopCoroutine(WallJump());
                 isWallJumping = false;
-                anim.SetBool("onWall", false);
+                //anim.SetBool("onWall", false);asdf
             }
             StartCoroutine(WallJump());
            
         }
 
         if (Input.GetButtonDown("Jump") && !grounded && !walljump) {
-             anim.SetBool("onWall", false);
+            // anim.SetBool("onWall", false); asdf
         }
 
 
@@ -125,7 +125,7 @@ public class PlayerPlatformerController : PhysicsObject
         } else
         {
             anim.SetTrigger("isStopped");
-            anim.SetBool("onWall", false);
+            //anim.SetBool("onWall", false); asdf
             //noSlideYet = true;
         }
 
