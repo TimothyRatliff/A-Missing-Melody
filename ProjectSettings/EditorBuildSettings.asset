@@ -62,4 +62,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Melody 3.unity
     guid: 4a3de27ec4b3fa544a92082c62cd41bf
+  - enabled: 1
+    path: Assets/Scenes/Level 3/Level 3-1.unity
+    guid: 03fe81b59103b984eb9d2ae2484febb4
+  - enabled: 1
+    path: Assets/Scenes/Level 3/Level 3-2.unity
+    guid: f654291e12f33ad4cabdd0a34c84b0a7
+  - enabled: 1
+    path: Assets/Scenes/Level 3/Level 3-3.unity
+    guid: 79848729717c36047b81ded900de6421
   m_configObjects: {}
