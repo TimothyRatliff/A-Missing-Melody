@@ -1,11 +1,11 @@
 fileFormatVersion: 2
-guid: 924887a06c3bea947bbe4ab854dbb66d
+guid: e1b27a8fc927387439597a3550f64ae8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: GruntMovementSpriteSheet_0
-    21300002: GruntMovementSpriteSheet_1
-    21300004: GruntMovementSpriteSheet_2
-    21300006: GruntMovementSpriteSheet_3
+    21300000: GruntAttackSpriteSheet_0
+    21300002: GruntAttackSpriteSheet_1
+    21300004: GruntAttackSpriteSheet_2
+    21300006: GruntAttackSpriteSheet_3
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -88,81 +88,81 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GruntMovementSpriteSheet_0
+      name: GruntAttackSpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 154
-        y: 280
-        width: 580
-        height: 512
-      alignment: 0
+        x: 1
+        y: 273
+        width: 565
+        height: 530
+      alignment: 9
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d15e035457dc9f14c9f14c5c1ed9463f
+      spriteID: 3f05c8c564043164083a847a771c8c8b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GruntMovementSpriteSheet_1
+      name: GruntAttackSpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 849
-        y: 288
-        width: 570
-        height: 526
+        x: 691
+        y: 258
+        width: 774
+        height: 458
       alignment: 9
-      pivot: {x: 0.5170333, y: 0.47890517}
+      pivot: {x: 0.29089656, y: 0.6217511}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc7f86a8d074d2448ab6ce0a03b7d9ba
+      spriteID: 02805a9e1e81e5a429f3273653029547
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GruntMovementSpriteSheet_2
+      name: GruntAttackSpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 1547
-        y: 275
-        width: 542
-        height: 545
+        x: 1520
+        y: 274
+        width: 669
+        height: 459
       alignment: 9
-      pivot: {x: 0.5255904, y: 0.502545}
+      pivot: {x: 0.3474114, y: 0.5847452}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 59011889ebae15a4da1b35c42093aded
+      spriteID: 79a6131b90e01be4486a93d9aa2de305
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GruntMovementSpriteSheet_3
+      name: GruntAttackSpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 2243
-        y: 277
-        width: 563
-        height: 528
+        x: 2263
+        y: 279
+        width: 564
+        height: 530
       alignment: 9
-      pivot: {x: 0.5, y: 0.48686564}
+      pivot: {x: 0.49244896, y: 0.49455982}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d8819b27b713be42b76e7c74a3a2abf
+      spriteID: a98b66722eef3364e9eb93ad9d9c0bde
       vertices: []
       indices: 
       edges: []
@@ -170,7 +170,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 45a80a8b034bf15469775970ce7995fb
+    spriteID: b4a626be0ccccc64cb3464711ddb12d7
     vertices: []
     indices: 
     edges: []

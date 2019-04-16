@@ -82,8 +82,7 @@ public class EnemyAI : MonoBehaviour
                 }
                 if (attacking)
                 {
-                    //TODO: put attack animation here
-                    Debug.Log("Enemy Attacking (need animation)");
+                    anim.SetTrigger("isAttacking");
                     attackCooldown -= Time.deltaTime;
                     speed = 0;
                     if (attackCooldown < 0)
