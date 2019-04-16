@@ -7,30 +7,42 @@ public class DialogueCollision : MonoBehaviour
 {
 
     public Dialogue dialogue;
-    private bool onePass;
-    private bool gameIsPaused = false;
+    private bool onePass = false;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player" && !onePass)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
+            
             onePass = true;
-            if (gameIsPaused)
-            {
-               // Resume();
-            }
-            else {
-                //Pause();
-            }
+            Pause();
+
+
         }
     }
 
-   /* void Pause() {
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Space)&& FindObjectOfType<DialogueManager>().animator.GetBool("isOpen").Equals(true))
+        {
+            Debug.Log("is it reaching here");
+            FindObjectOfType<DialogueManager>().DisplayNextSentence();
+        }
+        if (FindObjectOfType<DialogueManager>().animator.GetBool("isOpen").Equals(false)&&onePass)
+        {
+            Resume();
+        }
+    }
+
+
+    void Pause()
+    {
         Time.timeScale = 0f;
     }
 
-    void Resume() {
+    void Resume()
+    {
         Time.timeScale = 1f;
-    }*/
+    }
 }
