@@ -48,12 +48,15 @@ public class EnemyAI : MonoBehaviour
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
             if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired)
+            {
                 stunned = true;
+            }
 
             //stun//
 
             if (stunned)
             {
+                anim.SetTrigger("isStunned");
                 stunTime -= Time.deltaTime;
                 speed = 0;
                 if (stunTime < 0)
