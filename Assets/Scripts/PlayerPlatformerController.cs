@@ -173,6 +173,8 @@ public class PlayerPlatformerController : PhysicsObject
         isWallJumping = false;
     }
 
+  
+
     //protected IEnumerator Dash()
     //{
     //    rb2d.constraints = RigidbodyConstraints2D.FreezeAll;

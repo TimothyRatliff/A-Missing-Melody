@@ -24,11 +24,19 @@ public class PlayerAbilities : MonoBehaviour
             anim.SetTrigger("usingWhistle");
             fired = true;
             whistle.Play();
-            //grunt.GetComponent<EnemyAI>().Stunned();
         }
         else
         {
            fired = false; 
         }
     }
+
+    private void OnTrigger2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "DrumSticks")
+        {
+            //DestroyObject(EnemyAI itemToSpawn, 1);
+        }
+    }
+
 }

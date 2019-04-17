@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 4505534370665254665}
   m_Layer: 9
   m_Name: Item
-  m_TagString: EnemyGrunt
+  m_TagString: DrumSticks
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -71,7 +71,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9c7e24e6a2640f84db89f3e69fac3024, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d49bcecfff6a8b746be82cdd70b524ee, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -118,9 +118,9 @@ BoxCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: -0.019803047, y: -0.043705583}
   m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    border: {x: 8.83, y: 3.7000003, z: 13.76, w: 8.960001}
+    pivot: {x: 0.4060805, y: 0.33789265}
+    oldSize: {x: 25.520002, y: 15.100001}
     newSize: {x: 5.64, y: 5.29}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

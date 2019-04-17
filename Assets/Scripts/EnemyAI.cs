@@ -9,7 +9,7 @@ public class EnemyAI : MonoBehaviour
     public float headHight = 1f;
     private Transform target;
     public bool stunned, attacking;
-    public float stunTime = 3;
+    public float stunTime = 10;
     private float defaultStunTime;
     public float attackCooldown = 3;
     private float defaultAttackCooldown;
@@ -61,6 +61,7 @@ public class EnemyAI : MonoBehaviour
                 speed = 0;
                 if (stunTime < 0)
                 {
+                    anim.ResetTrigger("isStunned");
                     stunned = false;
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired = false;
                     speed = defaultSpeed;
@@ -83,7 +84,7 @@ public class EnemyAI : MonoBehaviour
                     myTrans.eulerAngles = currentRotation;
                     myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
                 }
-                if (attacking)
+                if (attacking && !stunned)
                 {
                     anim.SetTrigger("isAttacking");
                     attackCooldown -= Time.deltaTime;
@@ -119,8 +120,10 @@ public class EnemyAI : MonoBehaviour
         }
     }
 
-    // get the direction of the collision
-    void OnCollisionEnter2D(Collision2D obj)
+
+        // get the direction of the collision
+        //jumping on enemy
+        void OnCollisionEnter2D(Collision2D obj)
     {
         if (obj.gameObject.tag == "Player")
         {

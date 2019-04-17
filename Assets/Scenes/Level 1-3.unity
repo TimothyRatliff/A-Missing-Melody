@@ -604,7 +604,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318823863}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.17346096, y: 10.13797, z: -0.045754433}
+  m_LocalPosition: {x: 2.9433403, y: 10.153983, z: -0.045754433}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1281429838}
@@ -2720,7 +2720,7 @@ PrefabInstance:
     - target: {fileID: 4381130674093843158, guid: 34ac75f120bc8db4d91e8b4359702bec,
         type: 3}
       propertyPath: stunTime
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34ac75f120bc8db4d91e8b4359702bec, type: 3}
