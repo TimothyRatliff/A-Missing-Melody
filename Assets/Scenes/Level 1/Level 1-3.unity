@@ -1423,6 +1423,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grunt - Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 4381130673916967387, guid: 34ac75f120bc8db4d91e8b4359702bec,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4381130673916967390, guid: 34ac75f120bc8db4d91e8b4359702bec,
         type: 3}
       propertyPath: m_LocalPosition.x

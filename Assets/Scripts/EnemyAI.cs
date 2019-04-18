@@ -27,6 +27,7 @@ public class EnemyAI : MonoBehaviour
     private SpriteRenderer mySprite;
     private bool attack;
     private GameObject target;
+    public float distance = 5f;
 
     void Awake()
     {
@@ -71,7 +72,7 @@ public class EnemyAI : MonoBehaviour
                 }
 
             } else if (!stunned && !frozen) {
-                if (myTrans.position.x < targetTransform.position.x && Vector2.Distance(myTrans.position, targetTransform.position) > 5f)
+                if (myTrans.position.x < targetTransform.position.x && Vector2.Distance(myTrans.position, targetTransform.position) > distance)
                 {
                     anim.SetTrigger("isWalking");
                     Vector3 currentRotation = myTrans.eulerAngles;
@@ -79,7 +80,7 @@ public class EnemyAI : MonoBehaviour
                     myTrans.eulerAngles = currentRotation;
                     myTrans.position = Vector2.MoveTowards(myTrans.position, targetTransform.position, speed * Time.deltaTime);
                 }
-                else if (myTrans.position.x > targetTransform.position.x && Vector2.Distance(myTrans.position, targetTransform.position) > 5f)
+                else if (myTrans.position.x > targetTransform.position.x && Vector2.Distance(myTrans.position, targetTransform.position) > distance)
                 {
                     anim.SetTrigger("isWalking");
                     Vector3 currentRotation = myTrans.eulerAngles;
