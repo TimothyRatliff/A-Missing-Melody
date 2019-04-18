@@ -7,12 +7,13 @@ public class BossAI : MonoBehaviour
     public float speed;
     private float defaultSpeed;
     public float headHight = 1f;
-    private Transform target;
-    public bool stunned, attacking;
+    private GameObject target;
+    public bool stunned, canAttack;
     public float stunTime = 3;
     private float defaultStunTime;
     public float attackCooldown = 3;
     private float defaultAttackCooldown;
+    private Animator anim;
 
     public int health = 1;
     Rigidbody2D myBody;
@@ -27,6 +28,14 @@ public class BossAI : MonoBehaviour
     public GameObject gateToUnlock;
 
     private bool playerInAttack = false;
+    private bool attack;
+    private bool hitByProjectile;
+    private Transform targetTransform;
+
+    void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
 
     void Start()
     {
@@ -43,30 +52,25 @@ public class BossAI : MonoBehaviour
     {
         if (!dead)
         {
-                
-            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            target = GameObject.FindGameObjectWithTag("Player");
+            targetTransform = target.GetComponent<Transform>();
 
-            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().whistleFired)
+            if (target.GetComponent<PlayerAbilities>().whistleFired || hitByProjectile)
+            {
                 stunned = true;
+            }
 
             //stun//
-
             if (stunned)
             {
+                anim.SetTrigger("isStunned");
                 stunTime -= Time.deltaTime;
                 speed = 0;
-                mySprite.color = transparent;
-                if (!onepass)
-                {
-                    rb.simulated = false;
-                    onepass = true;
-                }
                 if (stunTime < 0)
                 {
+                    anim.ResetTrigger("isStunned");
                     stunned = false;
-                    onepass = false;
-                    rb.simulated = true;
-                    mySprite.color = Color.white;
+                    hitByProjectile = false;
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().whistleFired = false;
                     speed = defaultSpeed;
                     stunTime = defaultStunTime;
@@ -75,39 +79,54 @@ public class BossAI : MonoBehaviour
             }
             else if (!stunned && !frozen)
             {
-                if (myTrans.position.x < target.position.x)
+                if (myTrans.position.x < targetTransform.position.x)
                 {
+                    //anim.SetTrigger("isWalking");
                     Vector3 currentRotation = myTrans.eulerAngles;
                     currentRotation.y = 0;
                     myTrans.eulerAngles = currentRotation;
-                    myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
+                    //myTrans.position = Vector2.MoveTowards(myTrans.position, targetTransform.position, speed * Time.deltaTime);
                 }
-                else
+                else if (myTrans.position.x > targetTransform.position.x)
                 {
+                    //anim.SetTrigger("isWalking");
                     Vector3 currentRotation = myTrans.eulerAngles;
                     currentRotation.y = 180;
                     myTrans.eulerAngles = currentRotation;
-                    myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
+                    //myTrans.position = Vector2.MoveTowards(myTrans.position, targetTransform.position, speed * Time.deltaTime);
                 }
-                if (attacking)
+                else
                 {
-                    //TODO: put attack animation here
-                    Debug.Log("Enemy Attacking (need animation)");
+                    anim.SetTrigger("isStopped");
+                }
+                if (canAttack)
+                {
+                    if (!attack)
+                    {
+                        anim.SetTrigger("isAttacking");
+                        attack = true;
+                        StartCoroutine(killPlayer());
+                        speed = 0;
+                    }
                     attackCooldown -= Time.deltaTime;
-                    speed = 0;
                     if (attackCooldown < 0)
                     {
-                        attacking = false;
+                        attack = false;
+                        canAttack = false;
                         speed = defaultSpeed;
                         attackCooldown = defaultAttackCooldown;
                     }
                 }
             }
+            else
+            {
+                anim.SetTrigger("isStopped");
+            }
 
             if (health <= 0)
             {
-                dead = true;
                 transform.gameObject.SetActive(false);
+                dead = true;
             }
         }
     }
@@ -137,15 +156,22 @@ public class BossAI : MonoBehaviour
             Vector3 direction = transform.position - obj.gameObject.transform.position;
             if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y) && stunned)
             {
-                if (Mathf.Abs(direction.y) > headHight && Mathf.Abs(direction.x) < headHight / 2)
+                if (Mathf.Abs(direction.y) > headHight && Mathf.Abs(direction.x) < headHight)
                 {
-                    StartCoroutine(damageHealth(mySprite));
+                    StartCoroutine(damageEnemyHealth(mySprite));
                 }
             }
         }
     }
 
-    private IEnumerator damageHealth(SpriteRenderer sprite)
+    private IEnumerator killPlayer()
+    {
+        yield return new WaitForSeconds(0.4f);
+        if (playerInAttack) //Player dies
+            StartCoroutine(target.GetComponent<PlayerPlatformerController>().killPlayer());
+    }
+
+    private IEnumerator damageEnemyHealth(SpriteRenderer sprite)
     {
         sprite.color = Color.red;
         yield return new WaitForSeconds(0.6f);
@@ -164,6 +190,12 @@ public class BossAI : MonoBehaviour
         {
             playerInAttack = true;
         }
+        if (obj.gameObject.tag == "Projectile")
+        {
+            hitByProjectile = true;
+            Destroy(obj.gameObject);
+            StartCoroutine(damageEnemyHealth(mySprite));
+        }
     }
 
     void OnTriggerStay2D(Collider2D obj)
@@ -172,7 +204,7 @@ public class BossAI : MonoBehaviour
         {
             if (!stunned)
             {
-                attacking = true;
+                canAttack = true;
             }
         }
     }

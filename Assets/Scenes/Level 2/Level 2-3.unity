@@ -9381,39 +9381,5 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7502608343002007317, guid: e8593b8ac7ce21147b3ffff265840ada,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 2.82
-      objectReference: {fileID: 0}
-    - target: {fileID: 7502608343002007317, guid: e8593b8ac7ce21147b3ffff265840ada,
-        type: 3}
-      propertyPath: m_Offset.y
-      value: -0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 7006290019739219126, guid: e8593b8ac7ce21147b3ffff265840ada,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 4239129891938840295, guid: e8593b8ac7ce21147b3ffff265840ada,
-        type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1253073137, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
-      propertyPath: right
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 698296461, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
-      propertyPath: trumpetProjectile
-      value: 
-      objectReference: {fileID: 2133474294954656330, guid: f87f1da1d790d1e4c937a13ba872da8c,
-        type: 3}
-    - target: {fileID: 2182543255286976413, guid: e8593b8ac7ce21147b3ffff265840ada,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}

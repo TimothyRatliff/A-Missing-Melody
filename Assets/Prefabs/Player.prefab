@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: d76ff92335eaab54aafd7626db835f82, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 19.2, y: 10.32}
@@ -100,8 +100,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.06, y: -0.18}
-  m_Size: {x: 0.59, y: 3.15}
+  m_Offset: {x: 0.06, y: -0.08}
+  m_Size: {x: 0.59, y: 2.82}
   m_Direction: 0
 --- !u!50 &1970110209505271089
 Rigidbody2D:
@@ -168,7 +168,7 @@ MonoBehaviour:
   wallDirection: 0
   jump: {fileID: 0}
   walljump: 0
-  right: 0
+  right: 1
 --- !u!95 &1253073138
 Animator:
   serializedVersion: 3
@@ -200,11 +200,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abc2c3b0421a54f439303d564e1985bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firePoint: {fileID: 0}
   whistlePrefab: {fileID: 8117200410119957052}
   whistleFired: 0
   whistle: {fileID: 3799210786375730613}
-  trumpetProjectile: {fileID: 0}
+  trumpetProjectile: {fileID: 2133474294954656330, guid: f87f1da1d790d1e4c937a13ba872da8c,
+    type: 3}
 --- !u!1 &7671610004427098506
 GameObject:
   m_ObjectHideFlags: 0
