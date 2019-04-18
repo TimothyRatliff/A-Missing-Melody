@@ -26,7 +26,6 @@ public class DialogueCollision : MonoBehaviour
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space)&& FindObjectOfType<DialogueManager>().animator.GetBool("isOpen").Equals(true))
         {
-            Debug.Log("is it reaching here");
             FindObjectOfType<DialogueManager>().DisplayNextSentence();
         }
         if (FindObjectOfType<DialogueManager>().animator.GetBool("isOpen").Equals(false)&&onePass)

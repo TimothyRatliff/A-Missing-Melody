@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyAI : MonoBehaviour
 {
     public float speed;
     private float defaultSpeed;
     public float headHight = 1f;
-    private Transform target;
-    public bool stunned, attacking;
+    private Transform targetTransform;
+    public bool stunned, canAttack;
     public float stunTime = 10;
     private float defaultStunTime;
     public float attackCooldown = 3;
@@ -25,6 +26,8 @@ public class EnemyAI : MonoBehaviour
     public bool frozen;
 
     private SpriteRenderer mySprite;
+    private bool attack;
+    private GameObject target;
 
     void Awake()
     {
@@ -45,15 +48,15 @@ public class EnemyAI : MonoBehaviour
     {
         if (!dead)
         {
-            target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+            target = GameObject.FindGameObjectWithTag("Player");
+            targetTransform = target.GetComponent<Transform>();
 
-            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired)
+            if (target.GetComponent<PlayerAbilities>().fired)
             {
                 stunned = true;
             }
 
             //stun//
-
             if (stunned)
             {
                 anim.SetTrigger("isStunned");
@@ -69,33 +72,48 @@ public class EnemyAI : MonoBehaviour
                 }
 
             } else if (!stunned && !frozen) {
-                if (myTrans.position.x < target.position.x)
+                if (myTrans.position.x < targetTransform.position.x && Vector2.Distance(myTrans.position, targetTransform.position) > 5f)
                 {
                     anim.SetTrigger("isWalking");
                     Vector3 currentRotation = myTrans.eulerAngles;
                     currentRotation.y = 0;
                     myTrans.eulerAngles = currentRotation;
-                    myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
+                    myTrans.position = Vector2.MoveTowards(myTrans.position, targetTransform.position, speed * Time.deltaTime);
                 }
-                else
+                else if (myTrans.position.x > targetTransform.position.x && Vector2.Distance(myTrans.position, targetTransform.position) > 5f)
                 {
+                    anim.SetTrigger("isWalking");
                     Vector3 currentRotation = myTrans.eulerAngles;
                     currentRotation.y = 180;
                     myTrans.eulerAngles = currentRotation;
-                    myTrans.position = Vector2.MoveTowards(myTrans.position, target.position, speed * Time.deltaTime);
+                    myTrans.position = Vector2.MoveTowards(myTrans.position, targetTransform.position, speed * Time.deltaTime);
                 }
-                if (attacking && !stunned)
+                else
                 {
-                    anim.SetTrigger("isAttacking");
+                    anim.SetTrigger("isStopped");
+                }
+                if (canAttack)
+                {
+                    if (!attack)
+                    {
+                        anim.SetTrigger("isAttacking");
+                        attack = true;
+                        StartCoroutine(killPlayer());
+                        speed = 0;
+                    }
                     attackCooldown -= Time.deltaTime;
-                    speed = 0;
                     if (attackCooldown < 0)
                     {
-                        attacking = false;
+                        attack = false;
+                        canAttack = false;
                         speed = defaultSpeed;
                         attackCooldown = defaultAttackCooldown;
                     }
                 }
+            }
+            else
+            {
+                anim.SetTrigger("isStopped");
             }
 
             if (health <= 0)
@@ -129,15 +147,22 @@ public class EnemyAI : MonoBehaviour
         {
             Vector3 direction = transform.position - obj.gameObject.transform.position;
             if (Mathf.Abs(direction.x) < Mathf.Abs(direction.y) && stunned) {
-                if (Mathf.Abs(direction.y) > headHight && Mathf.Abs(direction.x) < headHight / 2)
+                if (Mathf.Abs(direction.y) > headHight && Mathf.Abs(direction.x) < headHight)
                 {
-                    StartCoroutine(damageHealth(mySprite));
+                    StartCoroutine(damageEnemyHealth(mySprite));
                 }
             }
         }
     }
 
-    private IEnumerator damageHealth(SpriteRenderer sprite)
+    private IEnumerator killPlayer()
+    {
+        yield return new WaitForSeconds(0.4f);
+        if (playerInAttack) //Player dies
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex); //Restart current scene
+    }
+
+    private IEnumerator damageEnemyHealth(SpriteRenderer sprite)
     {
         sprite.color = Color.red;
         yield return new WaitForSeconds(0.6f);
@@ -164,7 +189,7 @@ public class EnemyAI : MonoBehaviour
         {
             if (!stunned)
             {
-                attacking = true;
+                canAttack = true;
             }
         }
      }
