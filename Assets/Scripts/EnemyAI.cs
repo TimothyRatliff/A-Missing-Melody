@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -159,7 +158,7 @@ public class EnemyAI : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
         if (playerInAttack) //Player dies
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex); //Restart current scene
+            StartCoroutine(target.GetComponent<PlayerPlatformerController>().killPlayer());
     }
 
     private IEnumerator damageEnemyHealth(SpriteRenderer sprite)
