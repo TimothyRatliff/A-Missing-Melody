@@ -8,6 +8,7 @@ public class Item : MonoBehaviour
     public float thrust = 10.0f;
     public float turnMult = 2;
     private GameObject wallBlock;
+    public bool isTrumpet;
 
     void Start()
     {
@@ -28,6 +29,8 @@ public class Item : MonoBehaviour
         {
             if (wallBlock != null)
                 wallBlock.SetActive(false);
+            if (isTrumpet)
+                PlayerPrefs.SetInt("trumpet", 1);
             transform.gameObject.SetActive(false);
         }
     }

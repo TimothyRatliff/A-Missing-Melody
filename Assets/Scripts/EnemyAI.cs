@@ -28,6 +28,7 @@ public class EnemyAI : MonoBehaviour
     private bool attack;
     private GameObject target;
     public float distance = 5f;
+    private bool hitByProjectile;
 
     void Awake()
     {
@@ -51,7 +52,7 @@ public class EnemyAI : MonoBehaviour
             target = GameObject.FindGameObjectWithTag("Player");
             targetTransform = target.GetComponent<Transform>();
 
-            if (target.GetComponent<PlayerAbilities>().fired)
+            if (target.GetComponent<PlayerAbilities>().whistleFired || hitByProjectile)
             {
                 stunned = true;
             }
@@ -66,7 +67,8 @@ public class EnemyAI : MonoBehaviour
                 {
                     anim.ResetTrigger("isStunned");
                     stunned = false;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired = false;
+                    hitByProjectile = false;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().whistleFired = false;
                     speed = defaultSpeed;
                     stunTime = defaultStunTime;
                 }
@@ -181,7 +183,13 @@ public class EnemyAI : MonoBehaviour
         {
             playerInAttack = true;
         }
-     }
+        if (obj.gameObject.tag == "Projectile")
+        {
+            hitByProjectile = true;
+            Destroy(obj.gameObject);
+            StartCoroutine(damageEnemyHealth(mySprite));
+        }
+    }
 
     void OnTriggerStay2D(Collider2D obj)
      {  

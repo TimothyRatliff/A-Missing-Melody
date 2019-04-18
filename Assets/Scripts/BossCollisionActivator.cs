@@ -9,7 +9,6 @@ public class BossCollisionActivator : MonoBehaviour
     {
         if (obj.gameObject.tag == "Player")
         {
-            Debug.Log("works");
             boss.GetComponent<BossAI>().enableCollision();
         }
     }

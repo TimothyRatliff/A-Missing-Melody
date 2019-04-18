@@ -46,7 +46,7 @@ public class BossAI : MonoBehaviour
                 
             target = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
 
-            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired)
+            if (GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().whistleFired)
                 stunned = true;
 
             //stun//
@@ -67,7 +67,7 @@ public class BossAI : MonoBehaviour
                     onepass = false;
                     rb.simulated = true;
                     mySprite.color = Color.white;
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().fired = false;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().whistleFired = false;
                     speed = defaultSpeed;
                     stunTime = defaultStunTime;
                 }
