@@ -190,12 +190,12 @@ public class PlayerPlatformerController : PhysicsObject
     {
 
         spriteRend.color = Color.red;
-
+        anim.SetTrigger("DeathHappened");
         //Add death animation here//
 
         frozen = true;
         transform.GetComponent<PlayerAbilities>().enabled = false;
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(2.5f);
         spriteRend.color = Color.white;
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex); //Restart current scene
     }
