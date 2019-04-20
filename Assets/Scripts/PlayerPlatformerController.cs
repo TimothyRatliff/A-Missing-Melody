@@ -191,7 +191,6 @@ public class PlayerPlatformerController : PhysicsObject
 
         spriteRend.color = Color.red;
         anim.SetTrigger("DeathHappened");
-        //Add death animation here//
 
         frozen = true;
         transform.GetComponent<PlayerAbilities>().enabled = false;

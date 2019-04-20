@@ -36,6 +36,7 @@ public class PlayerAbilities : MonoBehaviour
                     pos = transform.position + (Vector3.right * 2) + (Vector3.up * 1.5f);
                 }
                 //Add Trumpet triggers animations
+                anim.SetTrigger("isTrumpeting");
                 GameObject.Instantiate(trumpetProjectile, pos, rot);
             }
             else
