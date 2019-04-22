@@ -19,8 +19,13 @@ public class BossProjectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D obj)
     {
-        if (obj.gameObject.name == "Wall" || obj.gameObject.name == "Tilemap")
+        if (obj.gameObject.name == "Tilemap")
         {
+            Destroy(transform.gameObject);
+        }
+        else if (obj.gameObject.tag == "Player")
+        {
+            StartCoroutine(obj.gameObject.GetComponent<PlayerPlatformerController>().killPlayer());
             Destroy(transform.gameObject);
         }
     }

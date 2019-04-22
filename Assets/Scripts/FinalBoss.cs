@@ -104,7 +104,12 @@ public class FinalBoss : MonoBehaviour
                 {
                     //anim.SetTrigger("isAttacking");
                     if (Random.Range(0, 2) == 0)
-                        GameObject.Instantiate(orbProjectile, transform.position + (Vector3.up * -1.5f), Quaternion.Euler(currentRotation)); //Needs to face down
+                    {
+                        GameObject orb = GameObject.Instantiate(orbProjectile, transform.position + (Vector3.up * -1.5f), Quaternion.Euler(currentRotation)); //Needs to face down
+                        Vector3 rot = orb.transform.eulerAngles;
+                        rot.z = -90;
+                        orb.transform.eulerAngles = rot;
+                    }
                     else
                         GameObject.Instantiate(beamProjectile, transform.position + (Vector3.up * -1.5f), Quaternion.Euler(currentRotation));
                     attack = true;
@@ -142,7 +147,14 @@ public class FinalBoss : MonoBehaviour
     {
         yield return new WaitForSeconds(0.3f);
         if (playerInAttack) //Player dies
+        {
             StartCoroutine(target.GetComponent<PlayerPlatformerController>().killPlayer());
+        }
+        else
+        {
+            speed = defaultSpeed;
+            attackCooldown = 1000f;
+        }
     }
 
     private IEnumerator damageEnemyHealth(SpriteRenderer sprite)
@@ -164,7 +176,7 @@ public class FinalBoss : MonoBehaviour
         {
             playerInAttack = true;
             StartCoroutine(killPlayer());
-            speed = defaultSpeed / 6;
+            speed = 0;
         }
         if (obj.gameObject.tag == "Projectile")
         {
@@ -177,7 +189,6 @@ public class FinalBoss : MonoBehaviour
     {
         if (obj.gameObject.tag == "Player")
         {
-            speed = defaultSpeed;
             playerInAttack = false;
         }
     }

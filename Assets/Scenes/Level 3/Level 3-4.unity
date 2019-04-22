@@ -13078,7 +13078,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -17
-  m_Sprite: {fileID: 21300000, guid: a167d9108dea13145802487e78597682, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e457b4492fda98c43bd88605dbfa0fd5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -14089,6 +14089,21 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 33.91217
       objectReference: {fileID: 0}
+    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.556198
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.584038
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.045754433
+      objectReference: {fileID: 0}
     - target: {fileID: 7884445348004883320, guid: 12789bde8c2000f4580f8f85d763108a,
         type: 3}
       propertyPath: m_Follow
@@ -14104,21 +14119,6 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 599491961}
-    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.556196
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 19.581676
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.045754433
-      objectReference: {fileID: 0}
     - target: {fileID: 7884445347413933685, guid: 12789bde8c2000f4580f8f85d763108a,
         type: 3}
       propertyPath: orthographic size
@@ -14381,12 +14381,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2eda2d4c066464f479b96d42d4fb0a4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4.5
+  speed: 4
   stunned: 0
   stunTime: 0.05
   attackCooldown: 3
   health: 50
-  frozen: 0
+  frozen: 1
   gateToUnlock: {fileID: 211680604}
   orbProjectile: {fileID: 3910788894411077802, guid: 4807b7c6096bd5d479672113256362a4,
     type: 3}
