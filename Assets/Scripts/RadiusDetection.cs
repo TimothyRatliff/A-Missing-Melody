@@ -10,9 +10,13 @@ public class RadiusDetection : MonoBehaviour
         {
             if( transform.GetChild(0).GetComponent<EnemyAI>() != null)
                 transform.GetChild(0).GetComponent<EnemyAI>().frozen = false;
-            else
+            else if (transform.GetChild(0).GetComponent<BossAI>() != null)
             {
                  transform.GetChild(0).GetComponent<BossAI>().frozen = false;
+            }
+            else if (transform.GetChild(0).GetComponent<FinalBoss>() != null)
+            {
+                transform.GetChild(0).GetComponent<FinalBoss>().frozen = false;
             }
         }
     }
@@ -23,9 +27,13 @@ public class RadiusDetection : MonoBehaviour
         {
             if( transform.GetChild(0).GetComponent<EnemyAI>() != null)
                 transform.GetChild(0).GetComponent<EnemyAI>().frozen = true;
-            else
+            else if (transform.GetChild(0).GetComponent<BossAI>() != null)
             {
-                 transform.GetChild(0).GetComponent<BossAI>().frozen = true;
+                transform.GetChild(0).GetComponent<BossAI>().frozen = false;
+            }
+            else if (transform.GetChild(0).GetComponent<FinalBoss>() != null)
+            {
+                transform.GetChild(0).GetComponent<FinalBoss>().frozen = false;
             }
         }
     }
