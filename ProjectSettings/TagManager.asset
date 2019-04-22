@@ -9,6 +9,7 @@ TagManager:
   - MusicManager
   - DrumSticks
   - Projectile
+  - Boss
   layers:
   - Default
   - TransparentFX
