@@ -8621,14 +8621,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4174365614541247584, guid: 43ba4fd255a55ca48a49671f83ed226e,
         type: 3}
-    - target: {fileID: 553234278, guid: 4b3baa83705c6b547ba2e1566bdf549b, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: f02c17efa2b56df4d9812e00010d01a1, type: 2}
-    - target: {fileID: 553234278, guid: 4b3baa83705c6b547ba2e1566bdf549b, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 553234277, guid: 4b3baa83705c6b547ba2e1566bdf549b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1

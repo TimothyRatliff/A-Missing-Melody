@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
 {
+    public bool flipX;
     public float speed;
     private float defaultSpeed;
     public float headHight = 1f;
@@ -78,7 +79,10 @@ public class EnemyAI : MonoBehaviour
                 {
                     anim.SetTrigger("isWalking");
                     Vector3 currentRotation = myTrans.eulerAngles;
-                    currentRotation.y = 0;
+                    if (flipX)
+                        currentRotation.y = 0;
+                    else
+                        currentRotation.y = 180;
                     myTrans.eulerAngles = currentRotation;
                     myTrans.position = Vector2.MoveTowards(myTrans.position, targetTransform.position, speed * Time.deltaTime);
                 }
@@ -86,7 +90,10 @@ public class EnemyAI : MonoBehaviour
                 {
                     anim.SetTrigger("isWalking");
                     Vector3 currentRotation = myTrans.eulerAngles;
-                    currentRotation.y = 180;
+                    if (flipX)
+                        currentRotation.y = 180;
+                    else
+                        currentRotation.y = 0;
                     myTrans.eulerAngles = currentRotation;
                     myTrans.position = Vector2.MoveTowards(myTrans.position, targetTransform.position, speed * Time.deltaTime);
                 }
