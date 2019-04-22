@@ -11,6 +11,7 @@ public class PlayerAbilities : MonoBehaviour
     public GameObject trumpetProjectile;
     private Quaternion rot;
     private Vector3 pos;
+    private float cooldown;
 
     void Awake()
     {
@@ -23,32 +24,45 @@ public class PlayerAbilities : MonoBehaviour
         //Whistle or trumpet
         if (Input.GetButtonDown("Fire1"))
         {
-            if (PlayerPrefs.GetInt("trumpet", 0) == 1)
+            if (cooldown < 0)
             {
-                if (transform.lossyScale.x == 1)
+                if (PlayerPrefs.GetInt("trumpet", 0) == 1)
                 {
-                    rot = Quaternion.Euler(0, 180, 0);
-                    pos = transform.position + -(Vector3.right * 2) + (Vector3.up * 1.5f);
+                    StartCoroutine(shoot());
+                    cooldown = 0.6f;
                 }
                 else
                 {
-                    rot = Quaternion.Euler(0, 0, 0);
-                    pos = transform.position + (Vector3.right * 2) + (Vector3.up * 1.5f);
+                    cooldown = 1f;
+                    anim.SetTrigger("usingWhistle");
+                    whistleFired = true;
+                    whistle.Play();
                 }
-                //Add Trumpet triggers animations
-                anim.SetTrigger("isTrumpeting");
-                GameObject.Instantiate(trumpetProjectile, pos, rot);
-            }
-            else
-            {
-                anim.SetTrigger("usingWhistle");
-                whistleFired = true;
-                whistle.Play();
             }
         }
         else
         {
            whistleFired = false; 
+           cooldown -= Time.deltaTime;
         }
+    }
+
+    private IEnumerator shoot()
+    {
+        if (transform.lossyScale.x == 1)
+        {
+            rot = Quaternion.Euler(0, 180, 0);
+            pos = transform.position + -(Vector3.right * 2) + (Vector3.up * 1.5f);
+        }
+        else
+        {
+            rot = Quaternion.Euler(0, 0, 0);
+            pos = transform.position + (Vector3.right * 2) + (Vector3.up * 1.5f);
+        }
+        //Add Trumpet triggers animations
+        anim.SetTrigger("isTrumpeting");
+
+        yield return new WaitForSeconds(0.2f);
+        GameObject.Instantiate(trumpetProjectile, pos, rot);
     }
 }
