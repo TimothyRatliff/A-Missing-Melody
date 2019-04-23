@@ -127,15 +127,11 @@ public class EnemyAI : MonoBehaviour
 
             if (health <= 0)
             {
+                SpawnItem(itemToSpawn);
                 transform.gameObject.SetActive(false);
                 dead = true;
             }
         }
-    }
-
-    private void OnDisable()
-    {
-        SpawnItem(itemToSpawn);
     }
 
     // Spawns GameObject upwards
@@ -178,6 +174,7 @@ public class EnemyAI : MonoBehaviour
         health--;
         if (health <= 0)
         {
+            SpawnItem(itemToSpawn);
             transform.gameObject.SetActive(false);
             dead = true;
         }
