@@ -205,6 +205,7 @@ MonoBehaviour:
   whistle: {fileID: 3799210786375730613}
   trumpetProjectile: {fileID: 2133474294954656330, guid: f87f1da1d790d1e4c937a13ba872da8c,
     type: 3}
+  resetSave: 0
 --- !u!1 &7671610004427098506
 GameObject:
   m_ObjectHideFlags: 0
@@ -497,8 +498,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 922091803
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300016, guid: 57541db62db895c4bb58222a06159f53, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

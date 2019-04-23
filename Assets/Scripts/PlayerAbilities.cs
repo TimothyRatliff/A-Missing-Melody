@@ -12,9 +12,15 @@ public class PlayerAbilities : MonoBehaviour
     public GameObject trumpetProjectile;
     private Quaternion rot;
     private Vector3 pos;
+    public bool resetSave;
 
     void Awake()
     {
+        if (resetSave)
+        {
+            PlayerPrefs.SetInt("trumpet", 0);
+            resetSave = false;
+        }
         animWhistle = whistlePrefab.GetComponent<Animator>();
         anim = transform.GetComponent<Animator>();
     }

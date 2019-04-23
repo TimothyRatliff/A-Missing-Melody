@@ -63,12 +63,13 @@ public class BossAI : MonoBehaviour
             //stun//
             if (stunned)
             {
-                anim.SetTrigger("isStunned");
+                //anim.SetTrigger("isStunned");
+                rb.simulated = false;
                 stunTime -= Time.deltaTime;
                 speed = 0;
                 if (stunTime < 0)
                 {
-                    anim.ResetTrigger("isStunned");
+                    //anim.ResetTrigger("isStunned");
                     stunned = false;
                     hitByProjectile = false;
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().whistleFired = false;
@@ -120,7 +121,7 @@ public class BossAI : MonoBehaviour
             }
             else
             {
-                anim.SetTrigger("isStopped");
+                //anim.SetTrigger("isStopped");
             }
 
             if (health <= 0)
