@@ -64,14 +64,22 @@ public class BossAI : MonoBehaviour
             if (stunned)
             {
                 //anim.SetTrigger("isStunned");
-                rb.simulated = false;
                 stunTime -= Time.deltaTime;
                 speed = 0;
+                mySprite.color = transparent;
+                if (!onepass)
+                {
+                    rb.simulated = false;
+                    onepass = true;
+                }
                 if (stunTime < 0)
                 {
                     //anim.ResetTrigger("isStunned");
                     stunned = false;
                     hitByProjectile = false;
+                    onepass = false;
+                    rb.simulated = true;
+                    mySprite.color = Color.white;
                     GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerAbilities>().whistleFired = false;
                     speed = defaultSpeed;
                     stunTime = defaultStunTime;
