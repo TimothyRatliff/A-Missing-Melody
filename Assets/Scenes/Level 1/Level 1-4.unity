@@ -1726,6 +1726,11 @@ PrefabInstance:
       propertyPath: gateToUnlock
       value: 
       objectReference: {fileID: 255241902}
+    - target: {fileID: 6273015939591795274, guid: 12d14979831a9c14fb7577b1f35e8066,
+        type: 3}
+      propertyPath: frozen
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4571563626389757609, guid: 12d14979831a9c14fb7577b1f35e8066,
         type: 3}
       propertyPath: m_TagString
