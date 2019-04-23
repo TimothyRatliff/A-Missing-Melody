@@ -91,13 +91,13 @@ TextureImporter:
       name: Boss1IdleAnimation_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 119
-        width: 819
-        height: 747
-      alignment: 9
+        x: 9
+        y: 113
+        width: 825
+        height: 748
+      alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 0, y: 27, z: 68, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -111,13 +111,13 @@ TextureImporter:
       name: Boss1IdleAnimation_1
       rect:
         serializedVersion: 2
-        x: 1036
+        x: 1032
         y: 106
-        width: 908
-        height: 753
-      alignment: 9
-      pivot: {x: 0.4614313, y: 0.51881546}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        width: 826
+        height: 743
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 68, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -133,36 +133,16 @@ TextureImporter:
         serializedVersion: 2
         x: 2210
         y: 94
-        width: 819
-        height: 746
-      alignment: 9
-      pivot: {x: 0.5, y: 0.52}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        width: 820
+        height: 748
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 65, w: 174}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
       spriteID: 98eb00cd089d78345ba7e53fbeed2064
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Boss1IdleAnimation_3
-      rect:
-        serializedVersion: 2
-        x: 3156
-        y: 70
-        width: 119
-        height: 60
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47aa55c79a8189b4f90a382c8708d047
       vertices: []
       indices: 
       edges: []
