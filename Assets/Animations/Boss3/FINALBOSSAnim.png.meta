@@ -1,10 +1,17 @@
 fileFormatVersion: 2
-guid: e4888489418dbf349ae3dcb457b12ce3
+guid: a2b8be560145498418b913f6658147e8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BossAnimWIP_4
-    21300002: BossAnimWIP_5
-    21300004: BossAnimWIP_8
+    21300000: FINALBOSSAnim_0
+    21300002: FINALBOSSAnim_1
+    21300004: FINALBOSSAnim_2
+    21300006: FINALBOSSAnim_3
+    21300008: FINALBOSSAnim_4
+    21300010: FINALBOSSAnim_5
+    21300012: FINALBOSSAnim_6
+    21300014: FINALBOSSAnim_7
+    21300016: FINALBOSSAnim_8
+    21300018: FINALBOSSAnim_9
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -87,61 +94,61 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BossAnimWIP_4
+      name: FINALBOSSAnim_4
       rect:
         serializedVersion: 2
-        x: 69
+        x: 101
         y: 315
-        width: 375
+        width: 334
         height: 428
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 63, y: 101, z: 67, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b168ce07e8422646a98411df7282f89
+      spriteID: 36e5be262ca51ca489811c4477af9042
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BossAnimWIP_5
+      name: FINALBOSSAnim_5
       rect:
         serializedVersion: 2
-        x: 497
-        y: 318
-        width: 326
-        height: 428
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+        x: 507
+        y: 337
+        width: 323
+        height: 409
+      alignment: 9
+      pivot: {x: 0.46486077, y: 0.5}
+      border: {x: 56, y: 82, z: 57, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d6fc9ffb5940d414881b32d58bb9ff21
+      spriteID: 1a789c4757718584183bb846c9f1ebb0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BossAnimWIP_8
+      name: FINALBOSSAnim_8
       rect:
         serializedVersion: 2
         x: 885
         y: 304
         width: 329
         height: 420
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      alignment: 9
+      pivot: {x: 0.51149946, y: 0.53603137}
+      border: {x: 64, y: 86, z: 40, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d9af11be1b8b0e47a5b2c316d005bf9
+      spriteID: ad713ea5e5281694d83e5836b0585c69
       vertices: []
       indices: 
       edges: []
@@ -149,7 +156,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6ecffdb8f8c1bbc4294ef57256f29bef
+    spriteID: d3d5b3b05866dfb4ab26c260fa6b69bc
     vertices: []
     indices: 
     edges: []
