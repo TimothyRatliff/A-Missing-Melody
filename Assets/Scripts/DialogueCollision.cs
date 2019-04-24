@@ -15,7 +15,6 @@ public class DialogueCollision : MonoBehaviour
         if (collision.gameObject.tag == "Player" && !onePass)
         {
             FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-            
             onePass = true;
             Pause();
 
