@@ -14079,6 +14079,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -14.556196
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.581676
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.045754433
+      objectReference: {fileID: 0}
+    - target: {fileID: 7884445347413933685, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: orthographic size
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7884445348004883321, guid: 12789bde8c2000f4580f8f85d763108a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14088,21 +14108,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 33.91217
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -14.556189
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 19.577324
-      objectReference: {fileID: 0}
-    - target: {fileID: 7884445347413933686, guid: 12789bde8c2000f4580f8f85d763108a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.045754433
       objectReference: {fileID: 0}
     - target: {fileID: 7884445348004883320, guid: 12789bde8c2000f4580f8f85d763108a,
         type: 3}
@@ -14119,11 +14124,6 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 599491961}
-    - target: {fileID: 7884445347413933685, guid: 12789bde8c2000f4580f8f85d763108a,
-        type: 3}
-      propertyPath: orthographic size
-      value: 9
-      objectReference: {fileID: 0}
     - target: {fileID: 7884445347323324492, guid: 12789bde8c2000f4580f8f85d763108a,
         type: 3}
       propertyPath: m_DeadZoneWidth
@@ -14385,7 +14385,7 @@ MonoBehaviour:
   stunned: 0
   stunTime: 0.05
   attackCooldown: 3
-  health: 20
+  health: 15
   frozen: 1
   gateToUnlock: {fileID: 211680604}
   orbProjectile: {fileID: 3910788894411077802, guid: 4807b7c6096bd5d479672113256362a4,

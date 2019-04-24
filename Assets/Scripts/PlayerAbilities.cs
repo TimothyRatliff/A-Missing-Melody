@@ -69,12 +69,12 @@ public class PlayerAbilities : MonoBehaviour
         if (transform.lossyScale.x == 1)
         {
             rot = Quaternion.Euler(0, 180, 0);
-            pos = transform.position + -(Vector3.right * 2) + (Vector3.up * 1.5f);
+            pos = transform.position + -(Vector3.right * 2.4f) + (Vector3.up * 1.35f);
         }
         else
         {
             rot = Quaternion.Euler(0, 0, 0);
-            pos = transform.position + (Vector3.right * 2) + (Vector3.up * 1.5f);
+            pos = transform.position + (Vector3.right * 2.4f) + (Vector3.up * 1.35f);
         }
         //Add Trumpet triggers animations
         anim.SetTrigger("isTrumpeting");
