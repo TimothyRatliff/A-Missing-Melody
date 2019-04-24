@@ -29,7 +29,6 @@ public class BossAI : MonoBehaviour
 
     private bool playerInAttack = false;
     private bool attack;
-    private bool hitByProjectile;
     private Transform targetTransform;
 
     void Awake()
@@ -55,7 +54,7 @@ public class BossAI : MonoBehaviour
             target = GameObject.FindGameObjectWithTag("Player");
             targetTransform = target.GetComponent<Transform>();
 
-            if (target.GetComponent<PlayerAbilities>().whistleFired || hitByProjectile)
+            if (target.GetComponent<PlayerAbilities>().whistleFired)
             {
                 stunned = true;
             }
@@ -76,7 +75,6 @@ public class BossAI : MonoBehaviour
                 {
                     //anim.ResetTrigger("isStunned");
                     stunned = false;
-                    hitByProjectile = false;
                     onepass = false;
                     rb.simulated = true;
                     mySprite.color = Color.white;
@@ -175,7 +173,7 @@ public class BossAI : MonoBehaviour
 
     private IEnumerator killPlayer()
     {
-        yield return new WaitForSeconds(0.4f);
+        yield return new WaitForSeconds(0.7f);
         if (playerInAttack) //Player dies
             StartCoroutine(target.GetComponent<PlayerPlatformerController>().killPlayer());
     }
@@ -201,7 +199,6 @@ public class BossAI : MonoBehaviour
         }
         if (obj.gameObject.tag == "Projectile")
         {
-            hitByProjectile = true;
             Destroy(obj.gameObject);
             StartCoroutine(damageEnemyHealth(mySprite));
         }
