@@ -14515,7 +14515,7 @@ MonoBehaviour:
   stunned: 0
   stunTime: 0.05
   attackCooldown: 3
-  health: 15
+  health: 7
   frozen: 1
   gateToUnlock: {fileID: 211680604}
   orbProjectile: {fileID: 3910788894411077802, guid: 4807b7c6096bd5d479672113256362a4,
