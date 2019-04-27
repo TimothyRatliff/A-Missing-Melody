@@ -8711,6 +8711,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4174365614541247584, guid: 43ba4fd255a55ca48a49671f83ed226e,
         type: 3}
+    - target: {fileID: 553234279, guid: 4b3baa83705c6b547ba2e1566bdf549b, type: 3}
+      propertyPath: headHight
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 553234277, guid: 4b3baa83705c6b547ba2e1566bdf549b, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
@@ -9325,16 +9329,6 @@ PrefabInstance:
       propertyPath: m_BoundingShape2D
       value: 
       objectReference: {fileID: 1173300758}
-    - target: {fileID: 4518190054469942041, guid: 12789bde8c2000f4580f8f85d763108a,
-        type: 3}
-      propertyPath: m_Follow
-      value: 
-      objectReference: {fileID: 1124655806}
-    - target: {fileID: 4518190054469942043, guid: 12789bde8c2000f4580f8f85d763108a,
-        type: 3}
-      propertyPath: m_BoundingShape2D
-      value: 
-      objectReference: {fileID: 1173300758}
     - target: {fileID: 4518190054953938455, guid: 12789bde8c2000f4580f8f85d763108a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9355,6 +9349,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 7.102168
       objectReference: {fileID: 0}
+    - target: {fileID: 4518190054469942041, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_Follow
+      value: 
+      objectReference: {fileID: 1124655806}
+    - target: {fileID: 4518190054469942043, guid: 12789bde8c2000f4580f8f85d763108a,
+        type: 3}
+      propertyPath: m_BoundingShape2D
+      value: 
+      objectReference: {fileID: 1173300758}
     - target: {fileID: 7822640928423834583, guid: 12789bde8c2000f4580f8f85d763108a,
         type: 3}
       propertyPath: m_Follow
@@ -9574,6 +9578,10 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 2.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 698296461, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
+      propertyPath: resetSave
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8593b8ac7ce21147b3ffff265840ada, type: 3}
